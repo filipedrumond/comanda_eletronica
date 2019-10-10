@@ -4,7 +4,12 @@
             class="header d-flex w-100 justify-content-between align-items-baseline"
         >
             <h2>Cardapio Eletrônico</h2>
-            <h5>Mesa - {{ idMesa }}</h5>
+            <h5>
+                Mesa - {{ idMesa }} <br />Status - {{ mesa.status }}
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa fa-ban" aria-hidden="true"></i>
+            </h5>
         </div>
         <div
             class="search d-flex w-100 justify-content-between align-items-baseline"
@@ -62,7 +67,7 @@ export default {
     name: "Cardapio",
     data() {
         return {
-            cardapio: [{ imgs: ["img"] }],
+            cardapio: [{ imgs: ["img"], valor: 0.0 }],
             mesa: [{ id: 0, status: 2 }],
             idMesa: 1
         };
