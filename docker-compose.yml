@@ -1,10 +1,10 @@
 version: '3'
 services:
-    easy_kitchen_front:
+    comanda_eletronica_front:
       build: 
           context: .
           dockerfile: Dockerfile
-      container_name: easy_kitchen_front
+      container_name: comanda_eletronica_front
       ports:
           - "8085:80"
       volumes:

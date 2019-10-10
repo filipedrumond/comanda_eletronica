@@ -1,16 +1,6 @@
 <template>
     <div class="home container">
         <button class="btn btn-primary">XXX</button>
-        <button class="btn btn-danger" @click="logout()">Logout</button>
-        <button
-            class="btn btn-primary"
-            @click="$router.push({ path: 'restaurante/teste' })"
-        >
-            restaurante
-        </button>
-        BEM VINDO {{ usuario }}
-        <br />
-        {{ $session.get("dadosUsuario") }}
         <h1 class="text-primary">primary</h1>
         <h1 class="text-secondary">secondary</h1>
         <h1 class="text-success">success</h1>
@@ -25,11 +15,9 @@ export default {
     name: "Home",
     data() {
         return {
-            usuario: ""
         };
     },
     created: function() {
-        this.usuario = this.$session.get("dadosUsuario").nome;
     }
 };
 </script>

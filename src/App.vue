@@ -9,12 +9,12 @@ export default {
     name: "App",
     data() {
         return {
-            tema: ""
+            // tema: ""
         };
     },
     created: function() {
         if(this.$session.exists()){
-            this.tema = this.$session.get("dadosUsuario").tema || "default";
+            // this.tema = this.$session.get("dadosUsuario").tema || "default";
         }
     }
 };
