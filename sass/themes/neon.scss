@@ -1,0 +1,17 @@
+$vapor-theme-colors: ();
+$vapor-theme-colors: map-merge(
+(
+// NAME      // COLOR
+"red":    		#ff0303,
+"light-blue":     	#00fff6,
+"green":    #00ff28,
+"purple":   #8400ff,
+"blue":   #0028ff
+),
+$vapor-theme-colors
+);
+@each $name, $color in $vapor-theme-colors {
+  .bg-neon#{$name} {
+    background-color: $color;
+  }
+}

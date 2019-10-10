@@ -1,0 +1,55 @@
+/******************************
+    VAPORWAVE BOOTSTRAP THEME
+@filipedp
+@06/09/2019
+******************************/
+/***** COLORS *****/
+$waterGreen: #6feae6;
+$pink:       #f6a3ef;
+$blue:	     #50d8ec;
+$purple:     #dd6dfb;
+$yellow:     #eecd69;
+$superPink:  #ff71ce;
+$superBlue:  #01cdfe;
+$superGreen: #05ffa1;
+$superPurple:#b967ff;
+$superYellow:#fffb96;
+
+$primary: $superGreen;
+$secondary: $superPink;
+$success: $superBlue;
+$danger:$superPurple;
+$warning:$superYellow;
+$info: $waterGreen;
+$bg: linear-gradient(lighten($primary,20%), lighten($secondary,20%));
+
+.new-vapor{
+
+.text-primary{color:$primary!important;}
+.text-secondary{color:$secondary!important;}
+.text-success{color:$success!important;}
+.text-danger{color:$danger!important;}
+.text-warning{color:$warning!important;}
+.text-info{color:$info!important;}
+
+.bg-theme{background: $bg}
+
+.btn-primary{
+    background-color:$primary!important;
+}
+.btn-secondary{
+    background-color:$secondary!important;
+}
+.btn-success{
+    background-color:$success!important;
+}
+.btn-danger{
+    background-color:$danger!important;
+}
+.btn-warning{
+    background-color:$warning!important;
+}
+.btn-info{
+    background-color:$info!important;
+}
+}

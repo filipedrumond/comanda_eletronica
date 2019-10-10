@@ -1,0 +1,17 @@
+$vapor-theme-colors: ();
+$vapor-theme-colors: map-merge(
+(
+// NAME      // COLOR
+"pink":    	#ff71ce,
+"blue":     #01cdfe,
+"green":    #05ffa1,
+"purple":   #b967ff,
+"yellow":   #fffb96
+),
+$vapor-theme-colors
+);
+@each $name, $color in $vapor-theme-colors {
+  .bg-vapor#{$name} {
+    background-color: $color;
+  }
+}

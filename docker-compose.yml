@@ -1,0 +1,14 @@
+version: '3'
+services:
+    easy_kitchen_front:
+      build: 
+          context: .
+          dockerfile: Dockerfile
+      container_name: easy_kitchen_front
+      ports:
+          - "8085:80"
+      volumes:
+          - .:/var/www/
+          #- ./server/apache2/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      environment:
+          - APPLICATION_ENV=development

@@ -1,0 +1,141 @@
+{
+  "temas": [
+    "new-vapor",
+    "neon"
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Filipe Dru",
+      "email": "filipe.dp@outlook.com",
+      "senha": "1234",
+      "tema": "new-vapor",
+      "tipo": 1
+    },
+    {
+      "id": 2,
+      "nome": "Breno ara",
+      "email": "breno@outlook.com",
+      "senha": "1234",
+      "tipo": 2,
+      "tema": "neon"
+    },
+    {
+      "id": 3,
+      "nome": "321",
+      "email": "fild.p123@gmail.com",
+      "senha": "1234",
+      "tema": "new-vapor"
+    },
+    {
+      "nome": "",
+      "email": "",
+      "senha": "",
+      "tema": "",
+      "id": 4
+    },
+    {
+      "nome": "Farabel",
+      "email": "farabel",
+      "senha": "qwert",
+      "tema": "neon",
+      "id": 5
+    }
+  ],
+  "base": [
+    {
+      "id": 1,
+      "content": "teste_1"
+    },
+    {
+      "id": 2,
+      "content": "teste_2"
+    },
+    {
+      "id": 3,
+      "content": "teste_3"
+    },
+    {
+      "content": "teste_post",
+      "id": 4
+    },
+    {
+      "content": "teste_post",
+      "id": 5
+    }
+  ],
+  "restaurantes": [
+    {
+      "nome": "teste",
+      "email": "restaurante@gmail.com",
+      "senha": "1234",
+      "id": 1,
+      "cardapio": [
+        {
+          "nome": "MIOJO",
+          "valor": 2.5,
+          "ingredientes": [
+            "Miojo",
+            "Tempero"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 11
+        },
+        {
+          "nome": "Coxinha",
+          "valor": 3.5,
+          "ingredientes": [
+            "Massa",
+            "Frango"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 12
+        },
+        {
+          "nome": "teste",
+          "valor": 1,
+          "ingredientes": [
+            "1",
+            "2"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 3
+        },
+        {
+          "nome": "Minha irmã",
+          "valor": 5,
+          "ingredientes": [
+            "6",
+            "9"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 4
+        },
+        {
+          "nome": "Breno é gey",
+          "valor": 24,
+          "ingredientes": [
+            "arco iris"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 5
+        }
+      ]
+    }
+  ]
+}
