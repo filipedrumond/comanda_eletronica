@@ -7,6 +7,8 @@ import VueSession from 'vue-session'
 import router from './routes'
 import App from './App'
 var $ = require('jquery');
+require('bootstrap/js/dist/collapse');
+
 window.$ = $;
 
 Vue.use(VueSession);
@@ -27,6 +29,30 @@ Vue.mixin({
     filters: {
         toReal: function (value) {
             return "R$ " + value.toFixed(2);
+        },
+        handleStatusItem: function (value) {
+            switch (value) {
+                case 1:
+                    return "fa fa-check";
+                case 2:
+                    return "fa fa-clock-o";
+                case 3:
+                    return "fa fa-times";
+                default:
+                    return "fa fa-times";
+            }
+        },
+        handleStatusMesa: function (value) {
+            switch (value) {
+                case 1:
+                    return "fa fa-check";
+                case 2:
+                    return "fa fa-clock-o";
+                case 3:
+                    return "fa fa-times";
+                default:
+                    return "fa fa-times";
+            }
         }
     },
     methods: {

@@ -1,4 +1,44 @@
 {
+    "categorias": [
+        {
+            "id": 1,
+            "categoria": "Prato Principal"
+        },
+        {
+            "id": 2,
+            "categoria": "Entrada"
+        },
+        {
+            "id": 3,
+            "categoria": "Bebida"
+        },
+        {
+            "id": 4,
+            "categoria": "Bebida Alcoolica"
+        },
+        {
+            "id": 5,
+            "categoria": "Tira Gosto"
+        },
+        {
+            "id": 6,
+            "categoria": "Doce"
+        }
+    ],
+    "mesaStatus": [
+        {
+            "id": 1,
+            "status": "Disponível"
+        },
+        {
+            "id": 2,
+            "status": "Aguardando Pagamento"
+        },
+        {
+            "id": 3,
+            "status": "Fechada"
+        }
+    ],
     "temas": [
         "new-vapor",
         "neon"
@@ -68,16 +108,58 @@
             "valor": 2.5,
             "status": 1,
             "ingredientes": [
-                "Cebola",
-                "Pimenta",
-                "Miojo",
-                "Tempero"
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
             ],
             "imgs": [
                 "607349.png",
                 "images.jpg"
             ],
             "id": 1
+        },
+        {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 2
         }
     ]
 }

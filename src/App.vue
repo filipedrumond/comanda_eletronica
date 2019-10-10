@@ -25,6 +25,9 @@ export default {
 
 <style lang="scss">
 @import "../sass/variables.scss";
+a {
+    text-decoration: none;
+}
 * {
     margin: 0;
     padding: 0;
