@@ -15,10 +15,10 @@ const router = new Router({
     // linkActiveClass: '-active',
     routes: [
         {
-            path: '/home',
-            name: 'home',
+            path: '/',
+            name: 'Home',
             component: Home,
-            alias: '/',
+            alias: '/home',
             // meta: { auth: true }
         },
         {

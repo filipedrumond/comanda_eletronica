@@ -6,3 +6,6 @@
 @import "~@filipedp/simple_dialog/scss/confirms";
 @import "components/all";
 @import "themes/all";
+
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
