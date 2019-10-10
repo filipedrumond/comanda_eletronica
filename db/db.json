@@ -66,6 +66,7 @@
             "descricao": "MIOJO COMPLETASSO CABULOSO",
             "categoria": "Prato Principal",
             "valor": 2.5,
+            "status": 1,
             "ingredientes": [
                 "Cebola",
                 "Pimenta",

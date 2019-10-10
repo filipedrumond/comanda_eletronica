@@ -1,16 +1,12 @@
 <template>
-    <div class="nav container-fluid">
-        <div class="row">
-            <nav class="col-12 d-flex">
-                <ul class="d-flex justify-content-around w-100">
-                    <li><a>HOME</a></li>
-                    <li><a>PEDIDOS</a></li>
-                    <li><a>COMANDA</a></li>
-                    <li><a>MESA</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <nav class="nav container-fluid">
+        <ul class="d-flex justify-content-around w-100">
+            <li><a>HOME</a></li>
+            <li><a>PEDIDOS</a></li>
+            <li><a>COMANDA</a></li>
+            <li><a>MESA</a></li>
+        </ul>
+    </nav>
 </template>
 
 <script>
@@ -28,8 +24,9 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "../../sass/variables.scss";
 nav {
-    background-color: rgb(216, 67, 67);
+    background-color: $primary;
     ul {
         li {
             list-style: none;

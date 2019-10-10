@@ -24,6 +24,11 @@ Vue.mixin({
             SimpleConfirms: SimpleConfirms,
         }
     },
+    filters: {
+        toReal: function (value) {
+            return "R$ " + value.toFixed(2);
+        }
+    },
     methods: {
         setTitle: function (title) {
             document.title = title;

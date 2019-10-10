@@ -20,17 +20,17 @@
                 <i class="fa fa-address-book" aria-hidden="true"></i>
             </a>
         </div>
-        <!-- <div class="row" v-for="item in cardapio" v-bind:key="item.id">
-            {{ item }}<br />
-            {{ mesa }}
-            <div class="col-md-3 col-3">
-                <img
-                    :src="'data:image/png;base64,' + item.imgs[0]"
-                    alt="Imagem do prato"
-                />
+        <div
+            class="row m-0 d-flex align-items-center item"
+            v-for="item in cardapio"
+            v-bind:key="item.id"
+        >
+            <div class="col-1">
+                <label class="container">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                </label>
             </div>
-        </div> -->
-        <div class="row" v-for="item in cardapio" v-bind:key="item.id">
             <div class="col-md-3 col-3">
                 <img
                     :src="'/img/prato-' + item.id + '/' + item.imgs[0]"
@@ -42,9 +42,18 @@
                 <span>{{ item.nome }}</span>
             </div>
             <div class="col-md-3 col-3">
-                <span>{{ item.valor }}</span>
+                <span>{{ item.valor | toReal }}</span>
+            </div>
+            <div class="col-2">
+                {{ item.status }}
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa fa-ban" aria-hidden="true"></i>
             </div>
         </div>
+        <button class="btn btn-fixed-bottom">
+            Fechar pedido
+        </button>
     </div>
 </template>
 
@@ -82,19 +91,37 @@ export default {
     },
     computed: {},
     watch: {},
-    methods: {}
+    methods: {},
+    updated() {
+        $(".item").click(function(params) {
+            let $input = $(this).find('input[type="checkbox"]');
+            $input.prop("checked", !$input.prop("checked"));
+        });
+    }
 };
 </script>
 
 <style lang='scss'>
+@import "../../sass/variables.scss";
 .header {
     padding-top: 0.7rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
-    background-color: rgb(216, 67, 67);
+    background-color: $primary;
     color: #ffffff;
     h5 {
         font-size: 1rem;
+    }
+}
+.btn-fixed-bottom {
+    background-color: rgb(216, 67, 67);
+    color: white;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    &:active,
+    &:focus {
+        color: white;
     }
 }
 .search {
