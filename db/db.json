@@ -39,6 +39,20 @@
             "status": "Fechada"
         }
     ],
+    "pratoStatus": [
+        {
+            "id": 1,
+            "status": "Disponível"
+        },
+        {
+            "id": 2,
+            "status": "Promoção por tempo limitado"
+        },
+        {
+            "id": 3,
+            "status": "Indisponível"
+        }
+    ],
     "temas": [
         "new-vapor",
         "neon"
@@ -134,7 +148,7 @@
         {
             "nome": "MIOJO2",
             "descricao": "MIOJO COMPLETASSO CABULOSO",
-            "categoria": "Prato Principal",
+            "categoria": "Tira Gosto",
             "valor": 2.5,
             "status": 2,
             "ingredientes": [
@@ -164,7 +178,7 @@
         {
             "nome": "MIOJO3",
             "descricao": "MIOJO COMPLETASSO CABULOSO",
-            "categoria": "Prato Principal",
+            "categoria": "Entrada",
             "valor": 2.5,
             "status": 3,
             "ingredientes": [
