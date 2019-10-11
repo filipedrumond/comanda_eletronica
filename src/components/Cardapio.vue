@@ -50,7 +50,7 @@
             </div>
         </div>
         <div
-            class="row m-0 d-flex align-items-center item"
+            class="row m-0 d-flex align-items-center item my-2"
             v-for="item in filteredCardapio"
             v-bind:key="item.id"
         >
@@ -81,7 +81,7 @@
             </div>
             <div class="col-12 collapse collapse-item ">
                 <span>{{ item.descricao }}</span>
-                <div class="row">
+                <div class="row mt-2">
                     <div
                         class="col-3 d-flex justify-content-start ingrediente"
                         v-for="ingrediente in item.ingredientes"

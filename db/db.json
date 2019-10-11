@@ -136,7 +136,37 @@
             "descricao": "MIOJO COMPLETASSO CABULOSO",
             "categoria": "Prato Principal",
             "valor": 2.5,
-            "status": 1,
+            "status": 2,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 2
+        },
+        {
+            "nome": "MIOJO3",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 3,
             "ingredientes": [
                 {
                     "id": 1,
