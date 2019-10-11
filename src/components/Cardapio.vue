@@ -21,6 +21,7 @@
                 id=""
                 class="form-control"
                 placeholder="Ex: Macarrão Bolonhesa"
+                v-model="filtroNome"
             />
             <a
                 class="icon-categories"
@@ -50,7 +51,7 @@
         </div>
         <div
             class="row m-0 d-flex align-items-center item"
-            v-for="item in cardapio"
+            v-for="item in filteredCardapio"
             v-bind:key="item.id"
         >
             <div class="col-1">
@@ -61,7 +62,7 @@
             </div>
             <div class="col-md-3 col-3">
                 <img
-                    :src="'/img/prato-' + item.id + '/' + item.imgs[0]"
+                    :src="'img/prato-' + item.id + '/' + item.imgs[0]"
                     class="img-fluid"
                     alt="Imagem do prato"
                 />
@@ -78,7 +79,7 @@
                     aria-hidden="true"
                 ></i>
             </div>
-            <div class="col-12 collapsex collapsex-item ">
+            <div class="col-12 collapse collapse-item ">
                 <span>{{ item.descricao }}</span>
                 <div class="row">
                     <div
@@ -95,6 +96,12 @@
                 </div>
             </div>
         </div>
+        <div class=" justify-content-center d-flex text-center mt-3">
+            <span class="sem-prato" style="display: none;">
+                Não foi possível localizar estes pratos😥<br />
+                tente outra pesquisa
+            </span>
+        </div>
         <button class="btn btn-fixed-bottom">
             Fechar pedido
         </button>
@@ -107,9 +114,11 @@ export default {
     data() {
         return {
             cardapio: [{ imgs: ["img"], valor: 0.0, status: 1 }],
+            filteredCardapio: [{ imgs: ["img"], valor: 0.0, status: 1 }],
             mesa: [{ id: 0, status: 2 }],
             idMesa: 1,
-            categorias: [{ id: 0, categoria: "Prato Principal" }]
+            categorias: [{ id: 0, categoria: "Prato Principal" }],
+            filtroNome: ""
         };
     },
     beforeCreate: function() {},
@@ -120,6 +129,7 @@ export default {
         this.$http.get(url).then(
             response => {
                 this.cardapio = response.body;
+                this.filteredCardapio = response.body;
             },
             response => {
                 this.SimpleAlerts.error({ title: "O BANCO MORREU" });
@@ -145,7 +155,26 @@ export default {
         );
     },
     computed: {},
-    watch: {},
+    watch: {
+        filtroNome: function(value) {
+            var $vue = this;
+            if (value !== "") {
+                $vue.filteredCardapio = $vue.cardapio.filter(element => {
+                    return (
+                        element.nome
+                            .toLowerCase()
+                            .indexOf(value.toLowerCase()) > -1
+                    );
+                });
+                return value;
+            }
+            $vue.filteredCardapio = $vue.cardapio;
+            return value;
+        },
+        filteredCardapio: function(value) {
+            value.length > 0 ? $(".sem-prato").hide() : $(".sem-prato").show();
+        }
+    },
     methods: {},
     updated() {
         $(".item")
@@ -154,8 +183,6 @@ export default {
                 let $item = this.closest(".item");
                 let $collapse = $($item).find(".collapse");
                 $collapse.collapse("toggle");
-                // let $input = $(this).find('input[type="checkbox"]');
-                // $input.prop("checked", !$input.prop("checked"));
             });
     }
 };
