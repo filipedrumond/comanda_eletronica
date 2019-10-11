@@ -12,14 +12,14 @@ import Home from '../components/Home'
 import Cardapio from '../components/Cardapio'
 Vue.use(Router);
 const router = new Router({
-    // linkActiveClass: '-active',
+    linkActiveClass: 'link-active',
     routes: [
         {
-            path: '/',
-            name: 'Home',
+            path: '/home',
+            name: 'home',
             component: Home,
-            alias: '/home',
-            // meta: { auth: true }
+            alias: '/',
+            // meta: { mesa: true }
         },
         {
             path: '/theme-test',
@@ -27,7 +27,7 @@ const router = new Router({
             alias: ['/themeTest', '/themetest', "/theme"],
             component: ThemeTest,
         },
-        
+
         {
             path: '/base',
             name: 'base',
@@ -35,49 +35,37 @@ const router = new Router({
         },
         {
             path: '/mesa/:idMesa',
-            name: 'Mesa',
+            name: 'mesa',
             component: Cardapio,
             meta: { title: "Mesa" }
-        }
-        // {
-        //     path: '/login',
-        //     name: 'login',
-        //     component: Login,
-        // },
-        // {
-        //     path: '/logout',
-        //     name: 'logout',
-        //     alias: ['/Logout', '/exit', '/Exit'],
-        //     component: Logout,
-        // },
-        // {
-        //     path: '/signin',
-        //     name: 'Cadastrar',
-        //     alias: ['/SignIn', '/cadastrar', '/mecadastrar'],
-        //     component: SignIn
-        // },
-        // {
-        //     path: '/cad_menu',
-        //     name: 'Cadastro Menu',
-        //     alias: ['/cadastro_menu', '/CadMenu', "/CadastroMenu"],
-        //     component: CadMenu
-        // },
+        },
+        {
+            path: '/pedido',
+            name: 'pedido',
+            component: Cardapio,
+            meta: { title: "Pedido" }
+        },
+        {
+            path: '/comanda',
+            name: 'comanda',
+            component: Cardapio,
+            meta: { title: "Comanda" }
+        },
     ],
 });
 router.beforeEach((to, from, next) => {
-    var authRequired = to.matched.some((route) => route.meta.auth);
-    // var isLogged = Vue.prototype.$session.exists("dadosUsuario");
-    // console.log("AUTH >>" + authRequired);
-    // console.log("ISLOGGED >>" + isLogged);
-    // if (authRequired && !isLogged) {
-    //     // Vue.prototype.$route.push({ path: "login" });
-    //     next("/login");
-    //     return;
-    // }
-    // if (to.path === "/login" && isLogged) {
-    //     next("/");
-    //     return;
-    // }
+    var mesaRequired = to.matched.some((route) => route.meta.mesa);
+    var hasMesa = Vue.prototype.$session.exists("idMesa");
+    var hasSession = Vue.prototype.$session.exists("idSession");
+
+    if (mesaRequired && (!hasMesa || !hasSession)) {
+        next("/semMesa");
+        return;
+    }
+    if (to.path === "/semMesa" && (hasMesa || hasSession)) {
+        next(`/mesa/${Vue.prototype.$session.get("idMesa")}`);
+        return;
+    }
     document.title = to.meta.title || "Easy Kitchen"
     next();
     return;

@@ -36,4 +36,8 @@ a {
 .container-fluid {
     padding: 0;
 }
+.link-active{
+    background-color: $white;
+    color: $black;
+}
 </style>

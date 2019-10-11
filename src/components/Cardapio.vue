@@ -27,6 +27,11 @@
                 class="icon-categories"
                 data-toggle="collapse"
                 href="#collapseCategorias"
+                @click="
+                    () => {
+                        this.filtroCategoria = '';
+                    }
+                "
             >
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -42,6 +47,8 @@
                         type="radio"
                         name="radioCategoria"
                         :id="'radio-' + categoria.id"
+                        :value="categoria.categoria"
+                        v-model="filtroCategoria"
                     />
                     <label :for="'radio-' + categoria.id">{{
                         categoria.categoria
@@ -118,13 +125,20 @@ export default {
             mesa: [{ id: 0, status: 2 }],
             idMesa: 1,
             categorias: [{ id: 0, categoria: "Prato Principal" }],
-            filtroNome: ""
+            filtroNome: "",
+            filtroCategoria: ""
         };
     },
     beforeCreate: function() {},
     filters: {},
     created: function() {
         this.idMesa = this.$route.params.idMesa;
+        if (!this.$session.exists()) {
+            this.$session.set("idMesa", this.idMesa);
+            this.$session.set("idSession", Math.floor(Math.random() * 1000));
+        }else{
+            this.idMesa = this.$session.get("idMesa");
+        }
         let url = `${this.db_url}cardapio`;
         this.$http.get(url).then(
             response => {
@@ -164,6 +178,19 @@ export default {
                         element.nome
                             .toLowerCase()
                             .indexOf(value.toLowerCase()) > -1
+                    );
+                });
+                return value;
+            }
+            $vue.filteredCardapio = $vue.cardapio;
+            return value;
+        },
+        filtroCategoria: function(value) {
+            var $vue = this;
+            if (value !== "") {
+                $vue.filteredCardapio = $vue.cardapio.filter(element => {
+                    return (
+                        element.categoria.toLowerCase() === value.toLowerCase()
                     );
                 });
                 return value;
