@@ -10,6 +10,7 @@ var $ = require('jquery');
 require('bootstrap/js/dist/collapse');
 
 window.$ = $;
+window.Vue = Vue;
 
 Vue.use(VueSession);
 Vue.use(VueResource);
@@ -59,6 +60,12 @@ Vue.mixin({
         setTitle: function (title) {
             document.title = title;
         },
+        endSession: function() {
+            if(this.$session.exists()){
+                this.$session.destroy();
+            }
+            this.$router.push({ path: "home" });
+        }
     }
 });
 new Vue({

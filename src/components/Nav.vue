@@ -15,7 +15,10 @@ export default {
     name: "Nav",
     data() {
         return {
-            validation: true
+            validation: true,
+            links:[
+                {text:"",link:""}
+            ]
         };
     },
     created: function() {},

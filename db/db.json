@@ -53,10 +53,6 @@
             "status": "Indisponível"
         }
     ],
-    "temas": [
-        "new-vapor",
-        "neon"
-    ],
     "base": [
         {
             "id": 1,
@@ -82,7 +78,10 @@
     "mesas": [
         {
             "id": 1,
-            "status": 1
+            "status": 1,
+            "sessions":[
+                {"idSession":1,"nome":"Filipe"}
+            ]
         }
     ],
     "comandas": [

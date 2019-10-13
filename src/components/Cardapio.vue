@@ -135,7 +135,7 @@ export default {
         this.idMesa = this.$route.params.idMesa;
         if (!this.$session.exists()) {
             this.$session.set("idMesa", this.idMesa);
-            this.$session.set("idSession", Math.floor(Math.random() * 1000));
+            this.$session.set("idSession", Math.floor(Math.random() * 1000 ** 3));
         }else{
             this.idMesa = this.$session.get("idMesa");
         }

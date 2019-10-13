@@ -15,9 +15,9 @@ export default {
         };
     },
     created: function() {
-        if (this.$session.exists()) {
+        // if (this.$session.exists()) {
             // this.tema = this.$session.get("dadosUsuario").tema || "default";
-        }
+        // }
     },
     components: { Nav }
 };

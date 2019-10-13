@@ -8,7 +8,7 @@ import Router from 'vue-router'
 // import Logout from '../components/Logout'
 import Home from '../components/Home'
 // import SignIn from '../components/SignIn'
-// import CadMenu from '../components/CadMenu'
+import Sair from '../components/Sair'
 import Cardapio from '../components/Cardapio'
 Vue.use(Router);
 const router = new Router({
@@ -21,6 +21,13 @@ const router = new Router({
             alias: '/',
             // meta: { mesa: true }
         },
+        {
+            path: '/sair',
+            name: 'sair',
+            component: Sair,
+            // meta: { mesa: true }
+        },
+        
         {
             path: '/theme-test',
             name: 'theme-test',
