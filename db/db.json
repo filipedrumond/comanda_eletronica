@@ -203,6 +203,18 @@
                 "images.jpg"
             ],
             "id": 3
+        },
+        {
+            "nome": "DOLLY GUARANÁ",
+            "descricao": "Bebida refrescante sabor guaraná",
+            "categoria": "Bebida",
+            "valor": 3.5,
+            "status": 1,
+            "ingredientes": [],
+            "imgs": [
+                "images.jpg"
+            ],
+            "id": 4
         }
     ]
 }

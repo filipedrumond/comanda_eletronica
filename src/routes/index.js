@@ -10,6 +10,7 @@ import Home from '../components/Home'
 // import SignIn from '../components/SignIn'
 import Sair from '../components/Sair'
 import Cardapio from '../components/Cardapio'
+import Pedido from '../components/Pedido'
 Vue.use(Router);
 const router = new Router({
     linkActiveClass: 'link-active',
@@ -49,7 +50,7 @@ const router = new Router({
         {
             path: '/pedido',
             name: 'pedido',
-            component: Cardapio,
+            component: Pedido,
             meta: { title: "Pedido" }
         },
         {
