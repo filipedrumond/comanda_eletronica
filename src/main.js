@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource';
 import VueStyleLoader from 'vue-style-loader'
+import VueCookies from 'vue-cookies'
 import { SimpleAlerts } from "@filipedp/simple_dialog";
 import { SimpleConfirms } from "@filipedp/simple_dialog";
+import { SimpleFormAlerts } from "@filipedp/simple_dialog";
 import VueSession from 'vue-session'
 import router from './routes'
 import App from './App'
 var $ = require('jquery');
 require('bootstrap/js/dist/collapse');
+
+console.log(SimpleFormAlerts);
 
 window.$ = $;
 window.Vue = Vue;
@@ -15,16 +19,22 @@ window.Vue = Vue;
 Vue.use(VueSession);
 Vue.use(VueResource);
 Vue.use(VueStyleLoader);
+Vue.use(VueCookies);
 
 Vue.config.productionTip = false;
 /* global mixin */
 Vue.mixin({
     data: function () {
         return {
-            db_url: "http://localhost:8015/",
-            defaultPath: "#/",
+            DB_CARDAPIO: "http://localhost:8015/",
+            DB_DINAMICO: "http://localhost:8016/",
+            DB_STATUS: "http://localhost:8017/",
+            IDSESSIONNAME: "idSession",
+            DEFAULTPATH: "#/",
+
             SimpleAlerts: SimpleAlerts,
             SimpleConfirms: SimpleConfirms,
+            SimpleFormAlerts: SimpleFormAlerts,
         }
     },
     filters: {
@@ -60,8 +70,8 @@ Vue.mixin({
         setTitle: function (title) {
             document.title = title;
         },
-        endSession: function() {
-            if(this.$session.exists()){
+        endSession: function () {
+            if (this.$session.exists()) {
                 this.$session.destroy();
             }
             this.$router.push({ path: "home" });

@@ -4,7 +4,11 @@
         <br />
         <br />
         <br />
-        {{ $session.getAll() }}
+        {{ $session.get(this.idSessionName) }}
+        <br />
+        <br />
+        <br />
+        {{ $cookies.get(this.idSessionName) }}
     </div>
 </template>
 
@@ -17,7 +21,7 @@ export default {
         };
     },
     created: function() {
-        let url = `${this.db_url}base`;
+        let url = `${this.DB_DINAMICO}pedidos`;
         this.$http.get(url).then(
             response => {
                 this.requestResult = response.body;

@@ -135,36 +135,43 @@ export default {
         this.idMesa = this.$route.params.idMesa;
         if (!this.$session.exists()) {
             this.$session.set("idMesa", this.idMesa);
-            this.$session.set("idSession", Math.floor(Math.random() * 1000 ** 3));
-        }else{
+            this.$session.set(
+                this.idSessionName,
+                Math.floor(Math.random() * 1000 ** 3)
+            );
+        } else {
             this.idMesa = this.$session.get("idMesa");
         }
-        let url = `${this.db_url}cardapio`;
+        let url = `${this.DB_CARDAPIO}cardapio`;
         this.$http.get(url).then(
             response => {
                 this.cardapio = response.body;
                 this.filteredCardapio = response.body;
             },
             response => {
-                this.SimpleAlerts.error({ title: "O BANCO MORREU" });
+                this.SimpleAlerts.error({
+                    title: "O BANCO MORREU NO CARDAPIO"
+                });
             }
         );
-        url = `${this.db_url}mesas/${this.idMesa}`;
+        url = `${this.DB_DINAMICO}mesas/${this.idMesa}`;
         this.$http.get(url).then(
             response => {
                 this.mesa = response.body;
             },
             response => {
-                this.SimpleAlerts.error({ title: "O BANCO MORREU" });
+                this.SimpleAlerts.error({ title: "O BANCO MORREU NA MESA" });
             }
         );
-        url = `${this.db_url}categorias/`;
+        url = `${this.DB_CARDAPIO}categorias/`;
         this.$http.get(url).then(
             response => {
                 this.categorias = response.body;
             },
             response => {
-                this.SimpleAlerts.error({ title: "O BANCO MORREU" });
+                this.SimpleAlerts.error({
+                    title: "O BANCO MORREU NA CATEGORIA"
+                });
             }
         );
     },

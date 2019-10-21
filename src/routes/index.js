@@ -1,16 +1,11 @@
-import ThemeTest from '../components/helpers/ThemeTest'
-import Base from '../components/helpers/Base'
-
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// import Login from '../components/Login'
-// import Logout from '../components/Logout'
 import Home from '../components/Home'
-// import SignIn from '../components/SignIn'
 import Sair from '../components/Sair'
 import Cardapio from '../components/Cardapio'
 import Pedido from '../components/Pedido'
+
 Vue.use(Router);
 const router = new Router({
     linkActiveClass: 'link-active',
@@ -27,19 +22,6 @@ const router = new Router({
             name: 'sair',
             component: Sair,
             // meta: { mesa: true }
-        },
-        
-        {
-            path: '/theme-test',
-            name: 'theme-test',
-            alias: ['/themeTest', '/themetest', "/theme"],
-            component: ThemeTest,
-        },
-
-        {
-            path: '/base',
-            name: 'base',
-            component: Base
         },
         {
             path: '/mesa/:idMesa',
@@ -64,7 +46,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     var mesaRequired = to.matched.some((route) => route.meta.mesa);
     var hasMesa = Vue.prototype.$session.exists("idMesa");
-    var hasSession = Vue.prototype.$session.exists("idSession");
+    var hasSession = Vue.prototype.$session.exists(Vue.prototype.idSessionName);
 
     if (mesaRequired && (!hasMesa || !hasSession)) {
         next("/semMesa");
