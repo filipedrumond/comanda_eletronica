@@ -1,0 +1,132 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "categoria": "Prato Principal"
+        },
+        {
+            "id": 2,
+            "categoria": "Entrada"
+        },
+        {
+            "id": 3,
+            "categoria": "Bebida"
+        },
+        {
+            "id": 4,
+            "categoria": "Bebida Alcoolica"
+        },
+        {
+            "id": 5,
+            "categoria": "Tira Gosto"
+        },
+        {
+            "id": 6,
+            "categoria": "Doce"
+        }
+    ],
+    "cardapio": [
+        {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 1
+        },
+        {
+            "nome": "MIOJO56",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Tira Gosto",
+            "valor": 2.5,
+            "status": 2,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 2
+        },
+        {
+            "nome": "MIOJO3",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Entrada",
+            "valor": 2.5,
+            "status": 3,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola"
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta"
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo"
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero"
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 3
+        },
+        {
+            "nome": "DOLLY GUARANÁ",
+            "descricao": "Bebida refrescante sabor guaraná",
+            "categoria": "Bebida",
+            "valor": 3.5,
+            "status": 1,
+            "ingredientes": [],
+            "imgs": [
+                "images.jpg"
+            ],
+            "id": 4
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "pratoStatus": [
+        {
+            "id": 1,
+            "status": "Disponível"
+        },
+        {
+            "id": 2,
+            "status": "Promoção por tempo limitado"
+        },
+        {
+            "id": 3,
+            "status": "Indisponível"
+        }
+    ],
+    "mesaStatus": [
+        {
+            "id": 1,
+            "status": "Disponível"
+        },
+        {
+            "id": 2,
+            "status": "Aguardando Pagamento"
+        },
+        {
+            "id": 3,
+            "status": "Fechada"
+        }
+    ],
+    "pedidoStatus": [
+        {
+            "id": 1,
+            "status": "Aguardando Pagamento"
+        },
+        {
+            "id": 2,
+            "status": "Em Preparo"
+        },
+        {
+            "id": 3,
+            "status": "Pronto"
+        },
+        {
+            "id": 4,
+            "status": "Finalizado"
+        }
+    ]
+}
