@@ -132,8 +132,8 @@ export default {
     beforeCreate: function() {},
     filters: {},
     created: function() {
-        this.idMesa = this.$route.params.idMesa;
-        if (!this.$session.exists()) {
+        this.idMesa = this.$route.params.idMesa || 1;
+        if (!this.$session.has("idMesa")) {
             this.$session.set("idMesa", this.idMesa);
             this.$session.set(
                 this.IDSESSIONNAME,

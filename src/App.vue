@@ -1,7 +1,6 @@
 <template>
     <div id="app" class="">
         <Nav />
-        {{ $session.get(this.IDSESSIONNAME) }}
         <router-view />
     </div>
 </template>
@@ -16,12 +15,11 @@ export default {
         };
     },
     created: function() {
-        if (this.$session.get(this.USERNAME)) {
+        if (this.$session.has(this.USERNAME)) {
             return;
         }
-        let nomeCookie = this.$cookies.get(this.USERNAME);
-        if (nomeCookie) {
-            this.$session.set(this.USERNAME, nomeCookie);
+        if (this.$cookies.isKey(this.USERNAME)) {
+            this.$session.set(this.USERNAME, this.$cookies.get(this.USERNAME));
             return;
         }
         let $VUE = this;
