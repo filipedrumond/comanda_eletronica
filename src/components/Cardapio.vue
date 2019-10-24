@@ -136,7 +136,7 @@ export default {
         if (!this.$session.exists()) {
             this.$session.set("idMesa", this.idMesa);
             this.$session.set(
-                this.idSessionName,
+                this.IDSESSIONNAME,
                 Math.floor(Math.random() * 1000 ** 3)
             );
         } else {

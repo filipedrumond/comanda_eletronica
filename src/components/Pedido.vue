@@ -4,11 +4,11 @@
         <br />
         <br />
         <br />
-        {{ $session.get(this.idSessionName) }}
+        {{ $session.get(this.IDSESSIONNAME) }}
         <br />
         <br />
         <br />
-        {{ $cookies.get(this.idSessionName) }}
+        {{ $cookies.get(this.IDSESSIONNAME) }}
     </div>
 </template>
 

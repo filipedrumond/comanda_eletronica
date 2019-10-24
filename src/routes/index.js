@@ -46,7 +46,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     var mesaRequired = to.matched.some((route) => route.meta.mesa);
     var hasMesa = Vue.prototype.$session.exists("idMesa");
-    var hasSession = Vue.prototype.$session.exists(Vue.prototype.idSessionName);
+    var hasSession = Vue.prototype.$session.exists(Vue.prototype.IDSESSIONNAME);
 
     if (mesaRequired && (!hasMesa || !hasSession)) {
         next("/semMesa");

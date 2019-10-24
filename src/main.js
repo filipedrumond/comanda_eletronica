@@ -11,10 +11,9 @@ import App from './App'
 var $ = require('jquery');
 require('bootstrap/js/dist/collapse');
 
-console.log(SimpleFormAlerts);
 
 window.$ = $;
-window.Vue = Vue;
+window.VUE = Vue;
 
 Vue.use(VueSession);
 Vue.use(VueResource);
@@ -31,6 +30,7 @@ Vue.mixin({
             DB_STATUS: "http://localhost:8017/",
             IDSESSIONNAME: "idSession",
             DEFAULTPATH: "#/",
+            USERNAME: "nome",
 
             SimpleAlerts: SimpleAlerts,
             SimpleConfirms: SimpleConfirms,
