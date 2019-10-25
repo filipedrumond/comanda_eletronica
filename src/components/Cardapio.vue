@@ -63,7 +63,12 @@
         >
             <div class="col-1">
                 <label class="check-container">
-                    <input type="checkbox" />
+                    <input
+                        :name="'prato-' + item.id"
+                        type="checkbox"
+                        v-model="pratosSelecionados"
+                        :value="item"
+                    />
                     <span class="checkmark"></span>
                 </label>
             </div>
@@ -95,7 +100,14 @@
                         v-bind:key="ingrediente.id"
                     >
                         <label class="check-container">
-                            <input type="checkbox" checked />
+                            <input
+                                type="checkbox"
+                                :disabled="ingrediente.status == 3"
+                                :checked="ingrediente.status == 1"
+                                v-model="ingrediente.status"
+                                :true-value="1"
+                                :false-value="2"
+                            />
                             <span class="checkmark"> </span>
                             {{ ingrediente.ingrediente }}
                         </label>
@@ -109,7 +121,7 @@
                 tente outra pesquisa
             </span>
         </div>
-        <button class="btn btn-fixed-bottom">
+        <button class="btn btn-fixed-bottom btn-fechar" @click="fazerPedido()">
             Fechar pedido
         </button>
     </div>
@@ -126,22 +138,88 @@ export default {
             idMesa: 1,
             categorias: [{ id: 0, categoria: "Prato Principal" }],
             filtroNome: "",
-            filtroCategoria: ""
+            filtroCategoria: "",
+            pratosSelecionados: []
         };
     },
-    beforeCreate: function() {},
-    filters: {},
-    created: function() {
-        this.idMesa = this.$route.params.idMesa || 1;
-        if (!this.$session.has("idMesa")) {
-            this.$session.set("idMesa", this.idMesa);
-            this.$session.set(
-                this.IDSESSIONNAME,
-                Math.floor(Math.random() * 1000 ** 3)
+    methods: {
+        fazerPedido: function() {
+            let hoje = new Date();
+            let data =
+                hoje.getFullYear() +
+                "-" +
+                (hoje.getMonth() + 1) +
+                "-" +
+                hoje.getDate();
+
+            let hora =
+                hoje.getHours() +
+                ":" +
+                hoje.getMinutes() +
+                ":" +
+                hoje.getSeconds();
+
+            let fuso = hoje
+                .toString()
+                .match(/\((.*)\)/)
+                .pop();
+
+            let pedido = {
+                pratos: this.pratosSelecionados,
+                idSession: this.$session.get(this.IDSESSIONNAME),
+                nome: this.$session.get(this.USERNAME),
+                idMesa: this.$session.get("idMesa"),
+                hora: hora,
+                data: data,
+                fusoHorario: fuso,
+                status: 1
+            };
+            let url = `${this.DB_DINAMICO}pedidos`;
+            this.$http.post(url, pedido).then(
+                response => {
+                    this.SimpleAlerts.success({ title: "Pedido Registrado !" });
+                    $(".btn-fechar").attr("disabled", true);
+                },
+                response => {
+                    this.SimpleAlerts.error({
+                        title: "O BANCO MORREU AO FAZER UM PEDIDO"
+                    });
+                }
             );
-        } else {
-            this.idMesa = this.$session.get("idMesa");
+        },
+        verificarIntegridadeDados: function() {
+            let random = Math.floor(Math.random() * 1000 ** 3);
+            if (this.$session.has(this.IDSESSIONNAME)) {
+                if (this.$cookies.isKey(this.IDSESSIONNAME)) {
+                    this.$cookies.set(
+                        this.IDSESSIONNAME,
+                        this.$session.get(this.IDSESSIONNAME)
+                    );
+                }
+                return;
+            }
+            if (this.$cookies.isKey(this.IDSESSIONNAME)) {
+                this.$session.set(
+                    this.IDSESSIONNAME,
+                    this.$cookies.get(this.IDSESSIONNAME)
+                );
+                return;
+            }
+            this.$session.set(this.IDSESSIONNAME, random);
+            this.$cookies.set(this.IDSESSIONNAME, random);
+        },
+        verificarIntegridadeMesa: function(params) {
+            if (this.$session.has(this.idMesa)) {
+                this.mesa = this.$session.get("idMesa");
+                return;
+            }
+            this.idMesa = this.$route.params.idMesa;
+            this.$session.set("idMesa", this.idMesa);
         }
+    },
+    created: function() {
+        this.verificarIntegridadeMesa();
+        this.verificarIntegridadeDados();
         let url = `${this.DB_CARDAPIO}cardapio`;
         this.$http.get(url).then(
             response => {
@@ -175,7 +253,6 @@ export default {
             }
         );
     },
-    computed: {},
     watch: {
         filtroNome: function(value) {
             var $vue = this;
@@ -209,7 +286,6 @@ export default {
             value.length > 0 ? $(".sem-prato").hide() : $(".sem-prato").show();
         }
     },
-    methods: {},
     updated() {
         $(".item")
             .find(".nome")

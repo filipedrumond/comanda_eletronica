@@ -35,19 +35,23 @@
             "ingredientes": [
                 {
                     "id": 1,
-                    "ingrediente": "Cebola"
+                    "ingrediente": "Cebola",
+                    "status":1
                 },
                 {
                     "id": 2,
-                    "ingrediente": "Pimenta"
+                    "ingrediente": "Pimenta",
+                    "status":1
                 },
                 {
                     "id": 3,
-                    "ingrediente": "Miojo"
+                    "ingrediente": "Miojo",
+                    "status":1
                 },
                 {
                     "id": 4,
-                    "ingrediente": "Tempero"
+                    "ingrediente": "Tempero",
+                    "status":1
                 }
             ],
             "imgs": [
@@ -65,19 +69,23 @@
             "ingredientes": [
                 {
                     "id": 1,
-                    "ingrediente": "Cebola"
+                    "ingrediente": "Cebola",
+                    "status":1
                 },
                 {
                     "id": 2,
-                    "ingrediente": "Pimenta"
+                    "ingrediente": "Pimenta",
+                    "status":1
                 },
                 {
                     "id": 3,
-                    "ingrediente": "Miojo"
+                    "ingrediente": "Miojo",
+                    "status":1
                 },
                 {
                     "id": 4,
-                    "ingrediente": "Tempero"
+                    "ingrediente": "Tempero",
+                    "status":1
                 }
             ],
             "imgs": [
@@ -95,19 +103,23 @@
             "ingredientes": [
                 {
                     "id": 1,
-                    "ingrediente": "Cebola"
+                    "ingrediente": "Cebola",
+                    "status":1
                 },
                 {
                     "id": 2,
-                    "ingrediente": "Pimenta"
+                    "ingrediente": "Pimenta",
+                    "status":1
                 },
                 {
                     "id": 3,
-                    "ingrediente": "Miojo"
+                    "ingrediente": "Miojo",
+                    "status":1
                 },
                 {
                     "id": 4,
-                    "ingrediente": "Tempero"
+                    "ingrediente": "Tempero",
+                    "status":1
                 }
             ],
             "imgs": [

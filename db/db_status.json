@@ -1,4 +1,9 @@
 {
+    "ingrediente":[
+        {"id":1,"status":"Disponível/Checkado"},
+        {"id":2,"status":"Disponível/NaoCheckado"},
+        {"id":3,"status":"Inpisponivel/"}
+    ],
     "pratoStatus": [
         {
             "id": 1,
