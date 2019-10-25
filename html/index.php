@@ -11,12 +11,12 @@
 
 <body>
     <div id="app"></div>
-    <form action="saveFile.php" method="post" enctype="multipart/form-data">
+    <!-- <form action="saveFile.php" method="post" enctype="multipart/form-data">
         aqui ó <br>
         <input type="file" name="inputThumbnail" id=""><br>
         <input type="hidden" name="idPrato" value="4"><br>
         <button type="submit">Aqui</button>
-    </form>
+    </form> -->
     <script src="build/js/main.js"></script>
 </body>
 

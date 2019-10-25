@@ -2,11 +2,13 @@
     <div id="app" class="">
         <Nav />
         <router-view />
+        <Rodape />
     </div>
 </template>
 
 <script>
 import Nav from "./components/Nav.vue";
+import Rodape from "./components/Rodape.vue";
 export default {
     name: "App",
     data() {
@@ -41,7 +43,7 @@ export default {
             }
         });
     },
-    components: { Nav }
+    components: { Nav, Rodape }
 };
 </script>
 
@@ -61,5 +63,9 @@ a {
 .link-active {
     background-color: $white;
     color: $black;
+}
+#app {
+    padding-top: 42px;
+    padding-bottom: 20px;
 }
 </style>

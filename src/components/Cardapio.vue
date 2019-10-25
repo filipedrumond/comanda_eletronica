@@ -194,8 +194,8 @@ export default {
                 return;
             }
             let hoje = new Date();
-            let data = `${hoje.getDate()} - ${hoje.getMonth() +
-                1} - ${hoje.getFullYear()}`;
+            let data = `${hoje.getDate()}-${hoje.getMonth() +
+                1}-${hoje.getFullYear()}`;
             let hora = `${hoje.getHours()}:${hoje.getMinutes()}`;
 
             let random =
@@ -355,11 +355,12 @@ export default {
     }
 }
 .btn-fixed-bottom {
-    background-color: $primary;
+    background-color: $bSuccess;
     color: white;
     position: fixed;
     bottom: 1.2rem;
     left: 1.2rem;
+    z-index: 2;
     &:active,
     &:focus {
         color: white;

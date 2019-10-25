@@ -3,10 +3,15 @@
         <ul class="d-flex justify-content-around w-100">
             <li><router-link :to="{ name: 'home' }">HOME</router-link></li>
             <li><router-link :to="{ name: 'pedido' }">PEDIDOS</router-link></li>
-            <li><router-link :to="{ name: 'comanda' }">COMANDA</router-link></li>
-            <li><router-link :to="{ name: 'mesa',params: { idMesa: 1 }}">MESA</router-link></li>
+            <li>
+                <router-link :to="{ name: 'comanda' }">COMANDA</router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'mesa', params: { idMesa: 1 } }"
+                    >MESA</router-link
+                >
+            </li>
         </ul>
-
     </nav>
 </template>
 
@@ -16,9 +21,7 @@ export default {
     data() {
         return {
             validation: true,
-            links:[
-                {text:"",link:""}
-            ]
+            links: [{ text: "", link: "" }]
         };
     },
     created: function() {},
@@ -30,7 +33,11 @@ export default {
 <style lang='scss'>
 @import "../../sass/variables.scss";
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     background-color: $primary;
+    height: 42px;
     ul {
         li {
             list-style: none;
@@ -46,6 +53,7 @@ nav {
                 background-color: rgb(218, 79, 79);
                 text-decoration: none;
                 color: white;
+                height: 42px !important;
                 &:hover {
                     box-shadow: 2px rgba(245, 116, 116, 0.5);
                 }

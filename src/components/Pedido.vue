@@ -25,7 +25,7 @@
                 </div>
                 <div
                     :class="
-                        `ml-auto d-flex btn-status align-items-center py-2 px-3 pedido-status-` +
+                        `ml-auto d-flex btn-status align-items-center justify-content-between py-2 px-3 pedido-status-` +
                             (pedido.status | handlerStatusPrato)
                     "
                 >
@@ -47,7 +47,7 @@
                 <div
                     v-for="item in pedido.pratos"
                     v-bind:key="item.id"
-                    class="row m-0 d-flex align-items-center item"
+                    class="row m-0 w-100 d-flex align-items-center item"
                 >
                     <div class="col-4">
                         <img
@@ -174,6 +174,7 @@ export default {
 @import "../../sass/variables.scss";
 .itens-pedido {
     width: 80%;
+    flex-wrap: wrap;
 }
 .btn-pagar {
     width: 20%;
@@ -182,7 +183,7 @@ export default {
     align-items: center;
 }
 .btn-status {
-    width: 35%;
+    width: 50%;
     color: $white;
     i {
         color: $white;
