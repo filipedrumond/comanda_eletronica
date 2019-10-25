@@ -1,9 +1,13 @@
 <template>
-    <div class="Pedido container" id="pedido">
+    <div class="Pedidos container" id="pedidos">
         <div class="d-flex w-100 mt-2">
             <h5 class="mb-0">Resumo de Pedidos</h5>
         </div>
-        <div v-for="pedido in pedidos" v-bind:key="pedido.id" class="row">
+        <div
+            v-for="pedido in pedidos"
+            v-bind:key="pedido.id"
+            class="row py-2 pedido"
+        >
             <div class="col-12 my-2 d-flex align-items-center pr-0">
                 <div class="w-100 text-center">
                     <div
@@ -43,51 +47,61 @@
                     </div>
                 </div>
             </div>
-            <div class="itens-pedido d-flex">
+            <div class="itens-pedido d-flex mb-2">
                 <div
                     v-for="item in pedido.pratos"
                     v-bind:key="item.id"
                     class="row m-0 w-100 d-flex align-items-center item"
                 >
-                    <div class="col-4">
+                    <!-- <div class="col-12">
                         <img
                             :src="'img/prato-' + item.id + '/' + item.imgs[0]"
-                            class="img-fluid"
+                            class="img-prato"
                             alt="Imagem do prato"
                         />
-                    </div>
-                    <div class="col-5 nome">
-                        <span>{{ item.nome }}</span>
-                    </div>
-                    <div class="col-3">
-                        <span>{{ item.valor | toReal }}</span>
-                    </div>
-                    <div class="col-12 collapse collapse-item ">
-                        <span>{{ item.descricao }}</span>
-                        <div class="row mt-2">
-                            <div
-                                class="col-3 d-flex justify-content-start ingrediente"
-                                v-for="ingrediente in item.ingredientes"
-                                v-bind:key="ingrediente.id"
-                            >
-                                <label class="check-container">
-                                    <input
-                                        type="checkbox"
-                                        disabled
-                                        :checked="ingrediente.status == 1"
-                                        v-model="ingrediente.status"
-                                        :true-value="1"
-                                        :false-value="2"
-                                    />
-                                    <span class="checkmark"> </span>
-                                    {{ ingrediente.ingrediente }}
-                                </label>
+                    </div> -->
+                    <div class="col-9 ">
+                        <b class="nome m-0 d-flex align-items-center">
+                            <span class="mr-2">
+                                {{ item.nome }}
+                            </span>
+                            <i
+                                class="fa fa-chevron-down"
+                                aria-hidden="true"
+                            ></i>
+                        </b>
+                        <div class="col-12 collapse collapse-item px-0">
+                            <span>{{ item.descricao }}</span>
+                            <div class="row mt-2">
+                                <div
+                                    class="col-3 d-flex justify-content-start ingrediente"
+                                    v-for="ingrediente in item.ingredientes"
+                                    v-bind:key="ingrediente.id"
+                                >
+                                    <label class="check-container">
+                                        <input
+                                            type="checkbox"
+                                            disabled
+                                            :checked="ingrediente.status == 1"
+                                            v-model="ingrediente.status"
+                                            :true-value="1"
+                                            :false-value="2"
+                                        />
+                                        <span class="checkmark"> </span>
+                                        <span>
+                                            {{ ingrediente.ingrediente }}
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-3 text-right">
+                        <span>{{ item.valor | toReal }}</span>
+                    </div>
                 </div>
             </div>
-            <div class="btn-pagar">
+            <!-- <div class="btn-pagar">
                 <div class="d-block text-center">
                     <i
                         class="fa fa-money"
@@ -98,8 +112,7 @@
                         <small>Pagar Agora</small>
                     </div>
                 </div>
-            </div>
-            <div class="separador"></div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -111,6 +124,22 @@ export default {
         return {
             pedidos: []
         };
+    },
+    methods: {
+        handlerStatusPrato: function(value) {
+            switch (value) {
+                case 1:
+                    return "fa fa-usd";
+                case 2:
+                    return "fa fa-hourglass-half";
+                case 3:
+                    return "fa fa-check";
+                case 4:
+                    return "fa fa-ticket";
+                default:
+                    return "fa fa-usd";
+            }
+        }
     },
     filters: {
         handlerStatusPrato: function(value) {
@@ -162,8 +191,10 @@ export default {
         $(".item")
             .find(".nome")
             .click(function(params) {
-                let $item = this.closest(".item");
-                let $collapse = $($item).find(".collapse");
+                let $item = $(this.closest(".item"));
+                let $collapse = $item.find(".collapse");
+                $item.find(".fa").toggleClass("fa-chevron-down");
+                $item.find(".fa").toggleClass("fa-chevron-up");
                 $collapse.collapse("toggle");
             });
     }
@@ -172,9 +203,37 @@ export default {
 
 <style lang='scss'>
 @import "../../sass/variables.scss";
+.pedido {
+    border-bottom: 1px solid $black;
+    &:last-child {
+        border: 0;
+    }
+    .item {
+        border-bottom: 1px solid $green;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        &:last-child {
+            border: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
 .itens-pedido {
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
+    // border-bottom: 1px solid $grey;
+    // .img-prato {
+    //     width: 100%;
+    //     height: 75px;
+    //     object-fit: cover;
+    //     object-position: 50% 24%;
+    // }
+    .nome {
+        i {
+            font-size: 0.8rem;
+        }
+    }
 }
 .btn-pagar {
     width: 20%;
@@ -195,7 +254,7 @@ export default {
         font-size: 0.8rem;
     }
 }
-.separador {
+.separador-pedidos {
     background-color: $black;
     display: flex;
     width: 100%;
