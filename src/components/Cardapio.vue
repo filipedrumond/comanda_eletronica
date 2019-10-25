@@ -152,12 +152,7 @@ export default {
                 "-" +
                 hoje.getDate();
 
-            let hora =
-                hoje.getHours() +
-                ":" +
-                hoje.getMinutes() +
-                ":" +
-                hoje.getSeconds();
+            let hora = hoje.getHours() + ":" + hoje.getMinutes();
 
             let fuso = hoje
                 .toString()
