@@ -4,17 +4,46 @@
             <h5 class="mb-0">Resumo de Pedidos</h5>
         </div>
         <div v-for="pedido in pedidos" v-bind:key="pedido.id" class="row">
-            <div class="col-12 my-2 d-flex align-items-center">
-                <span class="ml-auto"> Pedido - {{ pedido.id }} </span>
-                <div class="btn-status ml-auto">
-                    <i
-                        :class="pedido.status | handlerStatusPrato"
-                        aria-hidden="true"
-                        :title="pedido.status | handlerStatusPratoStr"
-                    ></i>
+            <div class="col-12 my-2 d-flex align-items-center pr-0">
+                <div class="w-100 text-center">
+                    <div
+                        class="d-flex justify-content-center align-items-baseline"
+                    >
+                        <h5 class="mb-0 mr-2">Pedido - {{ pedido.id }}</h5>
+                        <small
+                            ><b class="mr-1">Mesa:</b>{{ pedido.idMesa }}</small
+                        >
+                    </div>
+                    <div>
+                        <small class="mr-2">
+                            <b class="mr-1">DATA:</b> {{ pedido.data }}
+                        </small>
+                        <small>
+                            <b class="mr-1">HORA:</b>{{ pedido.hora }}
+                        </small>
+                    </div>
+                </div>
+                <div
+                    :class="
+                        `ml-auto d-flex btn-status align-items-center py-2 px-3 pedido-status-` +
+                            (pedido.status | handlerStatusPrato)
+                    "
+                >
+                    <div class="mr-2">
+                        <small>
+                            {{ pedido.status | handlerStatusPratoStr }}
+                        </small>
+                    </div>
+                    <div class="">
+                        <i
+                            :class="pedido.status | handlerStatusPrato"
+                            aria-hidden="true"
+                            :title="pedido.status | handlerStatusPratoStr"
+                        ></i>
+                    </div>
                 </div>
             </div>
-            <div class="col-10">
+            <div class="itens-pedido d-flex">
                 <div
                     v-for="item in pedido.pratos"
                     v-bind:key="item.id"
@@ -58,13 +87,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 status-pedido d-flex align-items-center">
-                <div class="btn-pagar">
+            <div class="btn-pagar">
+                <div class="d-block text-center">
                     <i
                         class="fa fa-money"
                         aria-hidden="true"
                         title="Realizar Pagamento"
                     ></i>
+                    <div class="">
+                        <small>Pagar Agora</small>
+                    </div>
                 </div>
             </div>
             <div class="separador"></div>
@@ -140,14 +172,26 @@ export default {
 
 <style lang='scss'>
 @import "../../sass/variables.scss";
-.status-pedido {
-    // display: flex;
-    // flex-wrap: wrap;
-    // // justify-content: space-between;
-    // vertical-align: baseline;
-    .btn-status {
+.itens-pedido {
+    width: 80%;
+}
+.btn-pagar {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-status {
+    width: 35%;
+    color: $white;
+    i {
+        color: $white;
     }
-    .btn-pagar {
+    small {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
     }
 }
 .separador {
@@ -179,27 +223,19 @@ export default {
 .fa {
     font-size: 1.5rem;
 }
-.fa-usd {
-    color: $red;
+.pedido-status-1 {
+    background-color: $bDanger;
 }
-.fa-hourglass-half {
-    color: $blue;
+.pedido-status-2 {
+    background-color: $bInfo;
 }
-.fa-check {
-    color: $green;
+.pedido-status-3 {
+    background-color: $bSuccess;
 }
-.fa-ticket {
-    color: $gold;
+.pedido-status-4 {
+    background-color: $bPrimary;
 }
-.btn-fixed-bottom {
-    background-color: $softGreen;
-    color: white;
-    position: fixed;
-    bottom: 1.2rem;
-    left: 1.2rem;
-    &:active,
-    &:focus {
-        color: white;
-    }
+.fa-money {
+    color: $softGreen;
 }
 </style>

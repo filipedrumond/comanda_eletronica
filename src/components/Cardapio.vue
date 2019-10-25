@@ -145,15 +145,9 @@ export default {
     methods: {
         fazerPedido: function() {
             let hoje = new Date();
-            let data =
-                hoje.getFullYear() +
-                "-" +
-                (hoje.getMonth() + 1) +
-                "-" +
-                hoje.getDate();
-
-            let hora = hoje.getHours() + ":" + hoje.getMinutes();
-
+            let data = `${hoje.getDate()} - ${hoje.getMonth() +
+                1} - ${hoje.getFullYear()}`;
+            let hora = `${hoje.getHours()}:${hoje.getMinutes()}`;
             let fuso = hoje
                 .toString()
                 .match(/\((.*)\)/)
@@ -183,7 +177,6 @@ export default {
             );
         },
         verificarIntegridadeDados: function() {
-            let random = Math.floor(Math.random() * 1000 ** 3);
             if (this.$session.has(this.IDSESSIONNAME)) {
                 if (this.$cookies.isKey(this.IDSESSIONNAME)) {
                     this.$cookies.set(
@@ -200,6 +193,16 @@ export default {
                 );
                 return;
             }
+            let hoje = new Date();
+            let data = `${hoje.getDate()} - ${hoje.getMonth() +
+                1} - ${hoje.getFullYear()}`;
+            let hora = `${hoje.getHours()}:${hoje.getMinutes()}`;
+
+            let random =
+                (Math.random() + "").replace(".", "") +
+                (Math.random() + "").replace(".", "") +
+                ` ** ${data} * ${hora}`;
+
             this.$session.set(this.IDSESSIONNAME, random);
             this.$cookies.set(this.IDSESSIONNAME, random);
         },
