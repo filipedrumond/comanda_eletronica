@@ -76,7 +76,8 @@
         "hora": "11:15",
         "data": "2019-10-25",
         "fusoHorario": "Horário Padrão de Brasília",
-        "status": 1
+        "status": 1,
+        "statusPagamento":1
     },
     "prato": {
         "nome": "MIOJO",

@@ -54,6 +54,7 @@
       "data": "2019-10-25",
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 1,
+      "statusPagamento":1,
       "id": 1
     },
     {
@@ -110,6 +111,7 @@
       "data": "2019-10-25",
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 1,
+      "statusPagamento":1,
       "id": 2
     },
     {
@@ -134,6 +136,7 @@
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 2,
+      "statusPagamento":2,
       "id": 3
     },
     {
@@ -192,6 +195,7 @@
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 3,
+      "statusPagamento":3,
       "id": 4
     },
     {
@@ -248,6 +252,7 @@
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 4,
+      "statusPagamento":2,
       "id": 5
     }
   ],

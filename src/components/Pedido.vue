@@ -53,13 +53,6 @@
                     v-bind:key="item.id"
                     class="row m-0 w-100 d-flex align-items-center item"
                 >
-                    <!-- <div class="col-12">
-                        <img
-                            :src="'img/prato-' + item.id + '/' + item.imgs[0]"
-                            class="img-prato"
-                            alt="Imagem do prato"
-                        />
-                    </div> -->
                     <div class="col-9 ">
                         <b class="nome m-0 d-flex align-items-center">
                             <span class="mr-2">
@@ -71,8 +64,17 @@
                             ></i>
                         </b>
                         <div class="col-12 collapse collapse-item px-0">
+                            <div
+                                class="mt-2
+                            "
+                            >
+                                <b>Descricao completa:</b>
+                            </div>
                             <span>{{ item.descricao }}</span>
                             <div class="row mt-2">
+                                <div class="col-12">
+                                    <b>Opicionais escolhidos:</b>
+                                </div>
                                 <div
                                     class="col-3 d-flex justify-content-start ingrediente"
                                     v-for="ingrediente in item.ingredientes"
@@ -101,18 +103,45 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="btn-pagar">
-                <div class="d-block text-center">
-                    <i
-                        class="fa fa-money"
-                        aria-hidden="true"
-                        title="Realizar Pagamento"
-                    ></i>
-                    <div class="">
-                        <small>Pagar Agora</small>
-                    </div>
-                </div>
-            </div> -->
+
+            <div class="w-100 d-flex justify-content-between px-3">
+                <span>TOTAL:</span>
+                <b>{{ calcularTotal(pedido) | toReal }}</b>
+            </div>
+            <div
+                v-if="pedido.status != 1"
+                class="w-100 d-flex justify-content-between px-3 mb-2"
+            >
+                <b>{{ pedido.statusPagamento | handlerStatusPagamentoStr }}</b>
+            </div>
+            <div class="w-100 d-flex justify-content-between px-3">
+                <span>Nome chamado:</span>
+                <b>{{ pedido.nome }}</b>
+            </div>
+
+            <div
+                v-if="pedido.status == 1"
+                @click="pagarAction(pedido)"
+                class="mt-1 d-flex justify-content-center align-items-center py-1 w-100 btn-pagar "
+            >
+                <small class="mr-2">Pagar Agora</small>
+                <i
+                    class="fa fa-money"
+                    aria-hidden="true"
+                    title="Realizar Pagamento"
+                ></i>
+            </div>
+            <div
+                v-if="pedido.status == 4"
+                class="mt-1 d-flex justify-content-center align-items-center py-1 w-100 btn-comprovante "
+            >
+                <small class="mr-2">Ver comprovante</small>
+                <i
+                    class="fa fa-ticket"
+                    aria-hidden="true"
+                    title="Realizar Pagamento"
+                ></i>
+            </div>
         </div>
     </div>
 </template>
@@ -126,6 +155,94 @@ export default {
         };
     },
     methods: {
+        pagarAction: function(pedido) {
+            let $VUE = this;
+            this.SimpleConfirms.success({
+                title: $("<span class='text-center'>").html(
+                    `Como deseja pagar o <br/>Pedido: <b class='text-primary'>N° ${pedido.id}</b> ?`
+                ),
+                text: $("<div>")
+                    .append(
+                        $(
+                            "<div class='my-2 text-left'>Escolhendo cartão o pedido é liberado na hora</div>"
+                        )
+                    )
+                    .append(
+                        $(
+                            "<div class='text-left'>Escolhendo ir até o caixa você pode pagar com dinheiro físico se desejar</div>"
+                        )
+                    ),
+                negateText: "Ir até o caixa",
+                negateCallback: function() {
+                    $VUE.SimpleAlerts.warning({
+                        title: $("<span class='text-center'>").html(
+                            `Dirija-se até o caixa e informe<br/>Pedido: <b class='text-primary'>N° ${pedido.id}</b>`
+                        ),
+                        text:
+                            "Indo até o caixa e informando o número do seu pedido o atendente efetuará o pagamento no sistema",
+                        time: 0
+                    });
+                },
+                confirmText: "Cartão",
+                confirmCallback: function() {
+                    let $form = $("<form>");
+
+                    let $nomeLabel = $(`<span>Nome impresso</span>`);
+                    let $nomeInput = $(
+                        "<input type='text' class='form-control'>"
+                    );
+                    let $nomeDiv = $("<div class='form-group text-left'></div>")
+                        .append($nomeLabel)
+                        .append($nomeInput);
+
+                    let $numeroLabel = $(`<span>Numero do cartão</span>`);
+                    let $numeroInput = $(
+                        "<input type='text' class='form-control'>"
+                    );
+                    let $numeroDiv = $(
+                        "<div class='form-group text-left'></div>"
+                    )
+                        .append($numeroLabel)
+                        .append($numeroInput);
+
+                    let $dataLabel = $(`<span>Data de vencimento</span>`);
+                    let $dataInput = $(
+                        "<input type='text' class='form-control'>"
+                    );
+                    let $dataDiv = $(
+                        "<div class='form-group text-left w-50'></div>"
+                    )
+                        .append($dataLabel)
+                        .append($dataInput);
+
+                    let $codigoLabel = $(`<span>Codigo de segurança</span>`);
+                    let $codigoInput = $(
+                        "<input type='text' class='form-control'>"
+                    );
+                    let $codigoDiv = $(
+                        "<div class='form-group text-left w-50'></div>"
+                    )
+                        .append($codigoLabel)
+                        .append($codigoInput);
+
+                    let $divDataCodigo = $("<div class='d-flex'>")
+                        .append($dataDiv)
+                        .append($codigoDiv);
+
+                    $form
+                        .append($nomeDiv)
+                        .append($numeroDiv)
+                        .append($divDataCodigo);
+                    $VUE.SimpleFormAlerts.warning({
+                        title: $("<span class='text-center'>").html(
+                            `Pagando <br/>Pedido: <b class='text-primary'>N° ${pedido.id}</b>`
+                        ),
+                        form: $form,
+                        submitCallback: function() {}
+                    });
+                }
+            });
+        },
         handlerStatusPrato: function(value) {
             switch (value) {
                 case 1:
@@ -139,6 +256,13 @@ export default {
                 default:
                     return "fa fa-usd";
             }
+        },
+        calcularTotal: function(pedido) {
+            let soma = 0;
+            pedido.pratos.forEach((el, i) => {
+                soma += parseFloat(el.valor);
+            });
+            return soma;
         }
     },
     filters: {
@@ -169,6 +293,18 @@ export default {
                 default:
                     return "Aguardando Pagamento";
             }
+        },
+        handlerStatusPagamentoStr: function(value) {
+            switch (value) {
+                case 1:
+                    return "Aguardando Pagamento";
+                case 2:
+                    return "Pago com cartão";
+                case 3:
+                    return "Pago no caixa";
+                default:
+                    return "Aguardando Pagamento";
+            }
         }
     },
     created: function() {
@@ -178,7 +314,6 @@ export default {
         this.$http.get(url).then(
             response => {
                 this.pedidos = response.body;
-                console.log(response.body);
             },
             response => {
                 this.SimpleAlerts.error({
@@ -209,7 +344,7 @@ export default {
         border: 0;
     }
     .item {
-        border-bottom: 1px solid $green;
+        border-bottom: 1px solid $softGrey;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         &:last-child {
@@ -222,24 +357,31 @@ export default {
 .itens-pedido {
     width: 100%;
     flex-wrap: wrap;
-    // border-bottom: 1px solid $grey;
-    // .img-prato {
-    //     width: 100%;
-    //     height: 75px;
-    //     object-fit: cover;
-    //     object-position: 50% 24%;
-    // }
     .nome {
         i {
             font-size: 0.8rem;
         }
     }
 }
+.btn-comprovante {
+    color: $black;
+    background-color: $gold;
+    i {
+        color: $black;
+    }
+    small {
+        font-size: 0.8rem;
+    }
+}
 .btn-pagar {
-    width: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    color: $white;
+    background-color: $bSuccess;
+    i {
+        color: $white;
+    }
+    small {
+        font-size: 0.8rem;
+    }
 }
 .btn-status {
     width: 50%;
@@ -293,7 +435,11 @@ export default {
     background-color: $bSuccess;
 }
 .pedido-status-4 {
-    background-color: $bPrimary;
+    background-color: $gold;
+    color: $black;
+    i {
+        color: $black;
+    }
 }
 .fa-money {
     color: $softGreen;
