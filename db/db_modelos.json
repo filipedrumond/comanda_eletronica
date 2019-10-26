@@ -77,7 +77,7 @@
         "data": "2019-10-25",
         "fusoHorario": "Horário Padrão de Brasília",
         "status": 1,
-        "statusPagamento":1
+        "statusPagamento": 1
     },
     "prato": {
         "nome": "MIOJO",
@@ -112,5 +112,129 @@
             "images.jpg"
         ],
         "id": 1
+    },
+    "pagamento": {
+        "pedido": {
+            "pratos": [
+                {
+                    "nome": "MIOJO",
+                    "descricao": "MIOJO COMPLETASSO CABULOSO",
+                    "categoria": "Prato Principal",
+                    "valor": 2.5,
+                    "status": 1,
+                    "ingredientes": [
+                        {
+                            "id": 1,
+                            "ingrediente": "Cebola",
+                            "status": 1
+                        },
+                        {
+                            "id": 2,
+                            "ingrediente": "Pimenta",
+                            "status": 1
+                        },
+                        {
+                            "id": 3,
+                            "ingrediente": "Miojo",
+                            "status": 1
+                        },
+                        {
+                            "id": 4,
+                            "ingrediente": "Tempero",
+                            "status": 1
+                        }
+                    ],
+                    "imgs": [
+                        "607349.png",
+                        "images.jpg"
+                    ],
+                    "id": 1
+                },
+                {
+                    "nome": "MIOJO",
+                    "descricao": "MIOJO COMPLETASSO CABULOSO",
+                    "categoria": "Prato Principal",
+                    "valor": 2.5,
+                    "status": 1,
+                    "ingredientes": [
+                        {
+                            "id": 1,
+                            "ingrediente": "Cebola",
+                            "status": 1
+                        },
+                        {
+                            "id": 2,
+                            "ingrediente": "Pimenta",
+                            "status": 1
+                        },
+                        {
+                            "id": 3,
+                            "ingrediente": "Miojo",
+                            "status": 1
+                        },
+                        {
+                            "id": 4,
+                            "ingrediente": "Tempero",
+                            "status": 1
+                        }
+                    ],
+                    "imgs": [
+                        "607349.png",
+                        "images.jpg"
+                    ],
+                    "id": 1
+                }
+            ],
+            "idSession": 146675745,
+            "nome": "Filope",
+            "idMesa": 1,
+            "hora": "11:15",
+            "data": "2019-10-25",
+            "fusoHorario": "Horário Padrão de Brasília",
+            "status": 1,
+            "statusPagamento": 1
+        },
+        "prato": {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+                {
+                    "id": 1,
+                    "ingrediente": "Cebola",
+                    "status": 1
+                },
+                {
+                    "id": 2,
+                    "ingrediente": "Pimenta",
+                    "status": 1
+                },
+                {
+                    "id": 3,
+                    "ingrediente": "Miojo",
+                    "status": 1
+                },
+                {
+                    "id": 4,
+                    "ingrediente": "Tempero",
+                    "status": 1
+                }
+            ],
+            "imgs": [
+                "607349.png",
+                "images.jpg"
+            ],
+            "id": 1
+        },
+        "id": 1,
+        "hora": "11:15",
+        "data": "2019-10-25",
+        "idSession": 146675745,
+        "nome": "Filope",
+        "idMesa": 1,
+        "fusoHorario": "Horário Padrão de Brasília",
+        "status": 2
     }
 }

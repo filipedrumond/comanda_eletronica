@@ -189,36 +189,38 @@ export default {
 
                     let $nomeLabel = $(`<span>Nome impresso</span>`);
                     let $nomeInput = $(
-                        "<input type='text' class='form-control'>"
+                        "<input required type='text' class='form-control' placeholder='Filipe D Pereira'>"
                     );
-                    let $nomeDiv = $("<div class='form-group text-left'></div>")
+                    let $nomeDiv = $(
+                        "<div class='form-group  text-left'></div>"
+                    )
                         .append($nomeLabel)
                         .append($nomeInput);
 
                     let $numeroLabel = $(`<span>Numero do cartão</span>`);
                     let $numeroInput = $(
-                        "<input type='text' class='form-control'>"
-                    );
+                        "<input required type='text' class='form-control' placeholder='1234 5678 9123 4567'>"
+                    ).mask("0000 0000 0000 0000");
                     let $numeroDiv = $(
-                        "<div class='form-group text-left'></div>"
+                        "<div class='form-group required text-left'></div>"
                     )
                         .append($numeroLabel)
                         .append($numeroInput);
 
                     let $dataLabel = $(`<span>Data de vencimento</span>`);
                     let $dataInput = $(
-                        "<input type='text' class='form-control'>"
-                    );
+                        "<input required type='text' class='form-control' placeholder='12/24'>"
+                    ).mask("00/00");
                     let $dataDiv = $(
-                        "<div class='form-group text-left w-50'></div>"
+                        "<div class='form-group  text-left w-50'></div>"
                     )
                         .append($dataLabel)
                         .append($dataInput);
 
                     let $codigoLabel = $(`<span>Codigo de segurança</span>`);
                     let $codigoInput = $(
-                        "<input type='text' class='form-control'>"
-                    );
+                        "<input required type='text' class='form-control' placeholder='1234'>"
+                    ).mask("00999");
                     let $codigoDiv = $(
                         "<div class='form-group text-left w-50'></div>"
                     )
@@ -233,13 +235,95 @@ export default {
                         .append($nomeDiv)
                         .append($numeroDiv)
                         .append($divDataCodigo);
+                    $($form)
+                        .find("input")
+                        .blur(function(e) {
+                            let preenchido = true;
+                            $($form)
+                                .find("input:required")
+                                .each(function() {
+                                    if ($(this).val() == "") {
+                                        preenchido = false;
+                                    }
+                                });
+                            if (preenchido) {
+                                $(".modal")
+                                    .find(".btn")
+                                    .attr("disabled", false);
+                            }
+                        });
                     $VUE.SimpleFormAlerts.warning({
                         title: $("<span class='text-center'>").html(
                             `Pagando <br/>Pedido: <b class='text-primary'>N° ${pedido.id}</b>`
                         ),
                         form: $form,
-                        submitCallback: function() {}
+                        submitCallback: function() {
+                            let hoje = new Date();
+                            let data = `${hoje.getDate()} - ${hoje.getMonth() +
+                                1} - ${hoje.getFullYear()}`;
+                            let hora = `${hoje.getHours()}:${hoje.getMinutes()}`;
+                            let fuso = hoje
+                                .toString()
+                                .match(/\((.*)\)/)
+                                .pop();
+                            let dados = {
+                                pedido: pedido,
+                                idSession: $VUE.$session.get(
+                                    $VUE.IDSESSIONNAME
+                                ),
+                                nome: $VUE.$session.get($VUE.USERNAME),
+                                idMesa: $VUE.$session.get("idMesa"),
+                                hora: hora,
+                                data: data,
+                                fusoHorario: fuso,
+                                status: 2
+                            };
+                            let url = `${$VUE.DB_PAGAMENTOS}pagamentos`;
+                            $VUE.$http.post(url, dados).then(
+                                response => {
+                                    $VUE.SimpleAlerts.success({
+                                        title: "Criado Pagamento",
+                                        closeCallback: function() {
+                                            url = `${$VUE.DB_DINAMICO}pedidos/${pedido.id}`;
+                                            let dadosPedido = pedido;
+                                            dadosPedido.statusPagamento = 2;
+                                            dadosPedido.status = 2;
+                                            $VUE.$http
+                                                .put(url, dadosPedido)
+                                                .then(
+                                                    response => {
+                                                        $VUE.SimpleAlerts.success(
+                                                            {
+                                                                title:
+                                                                    "Atualizado pedido"
+                                                            }
+                                                        );
+                                                    },
+                                                    response => {
+                                                        console.log(response);
+                                                        $VUE.SimpleAlerts.error(
+                                                            {
+                                                                title:
+                                                                    "O BANCO MORREU AO ATUALIZAR O PEDIDO"
+                                                            }
+                                                        );
+                                                    }
+                                                );
+                                        }
+                                    });
+                                },
+                                response => {
+                                    console.log(response);
+                                    $VUE.SimpleAlerts.error({
+                                        title:
+                                            "O BANCO MORREU AO SALVAR O PAGAMENTO"
+                                    });
+                                }
+                            );
+                        }
                     });
+                    // .find(".btn")
+                    // .attr("disabled", true);
                 }
             });
         },
@@ -314,6 +398,7 @@ export default {
         this.$http.get(url).then(
             response => {
                 this.pedidos = response.body;
+                // console.log(response.body);
             },
             response => {
                 this.SimpleAlerts.error({

@@ -10,6 +10,7 @@ import router from './routes'
 import App from './App'
 var $ = require('jquery');
 require('bootstrap/js/dist/collapse');
+require('jquery-mask-plugin');
 
 
 window.$ = $;
@@ -28,6 +29,7 @@ Vue.mixin({
             DB_CARDAPIO: "http://localhost:8015/",
             DB_DINAMICO: "http://localhost:8016/",
             DB_STATUS: "http://localhost:8017/",
+            DB_PAGAMENTOS: "http://localhost:8018/",
             IDSESSIONNAME: "idSession",
             DEFAULTPATH: "#/",
             USERNAME: "nome",
