@@ -3,12 +3,12 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-3 col-12">
                 <div class="form-group">
-                    <label class="" for="email">Email</label>
+                    <label class="" for="usuario">Usuario</label>
                     <input
                         class="form-control"
-                        id="email"
+                        id="usuario"
                         type="text"
-                        v-model="emailInput"
+                        v-model="usuarioInput"
                     />
                 </div>
                 <div class="form-group">
@@ -36,27 +36,41 @@
 
 <script>
 export default {
-    name: "Login",
+    name: "AdminLogin",
     data() {
         return {
-            emailInput: "",
+            usuarioInput: "",
             senhaInput: "",
             autoFill: true
         };
     },
     methods: {
         btnLogin: function() {
-            let response = this.login(
-                this.emailInput,
-                this.senhaInput,
-                function() {}
+            let url = `${this.DB_ADMIN}usuarios?usuario=${this.usuarioInput}&senha=${this.senhaInput}`;
+            this.$http.get(url).then(
+                response => {
+                    if (response.body.length !== 1) {
+                        this.SimpleAlerts.error({
+                            title: "Erro ao logar",
+                            text: "Usuario ou senha inválidos"
+                        });
+                        return;
+                    }
+                    this.$session.set("dadosAdmin", response.body[0]);
+                    this.$router.push({ path: "/admin/home" });
+                },
+                response => {
+                    this.SimpleAlerts.error({
+                        title: "O BANCO MORREU AO LOGAR"
+                    });
+                }
             );
         }
     },
     created() {
         if (this.autoFill) {
-            this.emailInput = "filipe.dp@outlook.com";
-            this.senhaInput = "1234";
+            this.usuarioInput = "filipedp";
+            this.senhaInput = "123";
         }
     }
 };

@@ -30,6 +30,7 @@ Vue.mixin({
             DB_DINAMICO: "http://localhost:8016/",
             DB_STATUS: "http://localhost:8017/",
             DB_PAGAMENTOS: "http://localhost:8018/",
+            DB_ADMIN: "http://localhost:8019/",
             IDSESSIONNAME: "idSession",
             DEFAULTPATH: "#/",
             USERNAME: "nome",

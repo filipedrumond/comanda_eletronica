@@ -6,6 +6,10 @@ import Sair from '../components/Sair'
 import Cardapio from '../components/Cardapio'
 import Pedido from '../components/Pedido'
 
+import AdminLogin from '../components/admin/Login'
+import AdminHome from '../components/admin/Home'
+
+
 Vue.use(Router);
 const router = new Router({
     linkActiveClass: 'link-active',
@@ -41,6 +45,17 @@ const router = new Router({
             component: Cardapio,
             meta: { title: "Comanda" }
         },
+        {
+            path: '/admin/login',
+            name: 'Login',
+            component: AdminLogin,
+        },
+        {
+            path: '/admin/Home',
+            name: 'Home',
+            component: AdminHome,
+        },
+
     ],
 });
 router.beforeEach((to, from, next) => {
@@ -60,4 +75,5 @@ router.beforeEach((to, from, next) => {
     next();
     return;
 })
+window.$VUEROUTER = router;
 export default router;
