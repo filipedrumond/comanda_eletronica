@@ -23,7 +23,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@filipedp/simple_dialog": "^1.2.8",
+    "@filipedp/simple_dialog": "^1.2.10",
     "bootstrap": "^4.3.1",
     "css-loader": "^3.2.0",
     "font-awesome": "^4.7.0",

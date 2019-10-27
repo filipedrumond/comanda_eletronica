@@ -7,7 +7,7 @@
                 <router-link :to="{ name: 'comanda' }">COMANDA</router-link>
             </li>
             <li>
-                <router-link :to="{ name: 'mesa', params: { idMesa: 1 } }"
+                <router-link :to="{ name: 'mesa', params: { idMesa: idMesa } }"
                     >MESA</router-link
                 >
             </li>
@@ -21,10 +21,13 @@ export default {
     data() {
         return {
             validation: true,
+            idMesa: 0,
             links: [{ text: "", link: "" }]
         };
     },
-    created: function() {},
+    created: function() {
+        this.idMesa = this.$session.get("idMesa");
+    },
     computed: {},
     methods: {}
 };

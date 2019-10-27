@@ -162,7 +162,7 @@ export default {
                 data: data,
                 fusoHorario: fuso,
                 status: 1,
-                statusPagamento:1
+                statusPagamento: 1
             };
             let url = `${this.DB_DINAMICO}pedidos`;
             this.$http.post(url, pedido).then(
