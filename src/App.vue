@@ -17,6 +17,9 @@ export default {
         };
     },
     created: function() {
+        if(!this.$session.exists()){
+            this.$session.start();
+        }
         if (this.$session.has(this.USERNAME)) {
             return;
         }
@@ -26,8 +29,6 @@ export default {
         }
         let $VUE = this;
         let $form = $("<form>");
-        // let $label = $("<label class=''>").html("Nome");
-        // $form.append($label);
         let $input = $("<input type='text' class='form-control'>");
         $form.append($("<div class='form-group'>").append($input));
         this.SimpleFormAlerts.success({

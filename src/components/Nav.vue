@@ -21,12 +21,12 @@ export default {
     data() {
         return {
             validation: true,
-            idMesa: 0,
+            idMesa: 1,
             links: [{ text: "", link: "" }]
         };
     },
     created: function() {
-        this.idMesa = this.$session.get("idMesa");
+        this.idMesa = this.$session.get("idMesa") || 1;
     },
     computed: {},
     methods: {}

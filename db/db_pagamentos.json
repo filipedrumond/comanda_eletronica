@@ -277,6 +277,417 @@
       "fusoHorario": "Horário Padrão de Brasília",
       "status": 2,
       "id": 5
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 1
+          }
+        ],
+        "idSession": "08183579226684887020527080235390138 ** 28-10-2019 * 16:39",
+        "nome": "Filipe",
+        "idMesa": "1",
+        "hora": "16:40",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "Horário Padrão de Brasília",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 6
+      },
+      "idSession": "08183579226684887020527080235390138 ** 28-10-2019 * 16:39",
+      "nome": "Filipe",
+      "idMesa": "1",
+      "hora": "16:41",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 2,
+      "id": 6
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 1
+          }
+        ],
+        "idSession": "097465732383367420041372479823521324 ** 28-10-2019 * 21:38",
+        "nome": "Profesor",
+        "idMesa": "1",
+        "hora": "21:39",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "-03",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 7
+      },
+      "idSession": "097465732383367420041372479823521324 ** 28-10-2019 * 21:38",
+      "nome": "Profesor",
+      "idMesa": "1",
+      "hora": "21:40",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "id": 7
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "DOLLY GUARANÁ",
+            "descricao": "Bebida refrescante sabor guaraná",
+            "categoria": "Bebida",
+            "valor": 3.5,
+            "status": 1,
+            "ingredientes": [],
+            "imgs": [
+              "images.jpg"
+            ],
+            "id": 4
+          }
+        ],
+        "idSession": "0820214719252576809859872410876193 ** 28-10-2019 * 21:39",
+        "nome": "Gostosão",
+        "idMesa": "1",
+        "hora": "21:39",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "-03",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 8
+      },
+      "idSession": "0820214719252576809859872410876193 ** 28-10-2019 * 21:39",
+      "nome": "Gostosão",
+      "hora": "21:40",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "id": 8
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 2
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 2
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 1
+          },
+          {
+            "nome": "MIOJO3",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Entrada",
+            "valor": 2.5,
+            "status": 3,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 3
+          },
+          {
+            "nome": "MIOJO56",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Tira Gosto",
+            "valor": 2.5,
+            "status": 2,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 2
+          }
+        ],
+        "idSession": "0601930440467623305437774524264216 ** 28-10-2019 * 21:40",
+        "nome": "Rafael",
+        "idMesa": "1",
+        "hora": "21:40",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "-03",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 9
+      },
+      "idSession": "0601930440467623305437774524264216 ** 28-10-2019 * 21:40",
+      "nome": "Rafael",
+      "idMesa": "1",
+      "hora": "21:40",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "id": 9
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 1
+          },
+          {
+            "nome": "DOLLY GUARANÁ",
+            "descricao": "Bebida refrescante sabor guaraná",
+            "categoria": "Bebida",
+            "valor": 3.5,
+            "status": 1,
+            "ingredientes": [],
+            "imgs": [
+              "images.jpg"
+            ],
+            "id": 4
+          }
+        ],
+        "idSession": "0700538993670009807445230351166395 ** 28-10-2019 * 21:38",
+        "nome": "Teste",
+        "idMesa": "1",
+        "hora": "21:40",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "-03",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 12
+      },
+      "idSession": "0700538993670009807445230351166395 ** 28-10-2019 * 21:38",
+      "nome": "Teste",
+      "idMesa": "1",
+      "hora": "21:41",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "id": 10
+    },
+    {
+      "pedido": {
+        "pratos": [
+          {
+            "nome": "MIOJO",
+            "descricao": "MIOJO COMPLETASSO CABULOSO",
+            "categoria": "Prato Principal",
+            "valor": 2.5,
+            "status": 1,
+            "ingredientes": [
+              {
+                "id": 1,
+                "ingrediente": "Cebola",
+                "status": 1
+              },
+              {
+                "id": 2,
+                "ingrediente": "Pimenta",
+                "status": 1
+              },
+              {
+                "id": 3,
+                "ingrediente": "Miojo",
+                "status": 1
+              },
+              {
+                "id": 4,
+                "ingrediente": "Tempero",
+                "status": 1
+              }
+            ],
+            "imgs": [
+              "607349.png",
+              "images.jpg"
+            ],
+            "id": 1
+          },
+          {
+            "nome": "DOLLY GUARANÁ",
+            "descricao": "Bebida refrescante sabor guaraná",
+            "categoria": "Bebida",
+            "valor": 3.5,
+            "status": 1,
+            "ingredientes": [],
+            "imgs": [
+              "images.jpg"
+            ],
+            "id": 4
+          }
+        ],
+        "idSession": "0700538993670009807445230351166395 ** 28-10-2019 * 21:38",
+        "nome": "Teste",
+        "idMesa": "1",
+        "hora": "21:43",
+        "data": "28 - 10 - 2019",
+        "fusoHorario": "-03",
+        "status": 1,
+        "statusPagamento": 1,
+        "id": 17
+      },
+      "idSession": "0700538993670009807445230351166395 ** 28-10-2019 * 21:38",
+      "nome": "Teste",
+      "idMesa": "1",
+      "hora": "21:43",
+      "data": "28 - 10 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "id": 11
     }
   ]
 }
