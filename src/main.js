@@ -98,6 +98,20 @@ Vue.mixin({
                     return "Aguardando Pagamento";
             }
         },
+        handlerStatusPedidotr: function (value) {
+            switch (value) {
+                case 1:
+                    return "Aguardando Pagamento";
+                case 2:
+                    return "Em Preparo";
+                case 3:
+                    return "Pronto";
+                case 4:
+                    return "Finalizado";
+                default:
+                    return "Aguardando Pagamento";
+            }
+        },
         handlerStatusPagamentoStr: function (value) {
             switch (value) {
                 case 1:
@@ -108,6 +122,18 @@ Vue.mixin({
                     return "Pago no caixa";
                 default:
                     return "Aguardando Pagamento";
+            }
+        },
+        handlerStatusIngredienteStr: function (value) {
+            switch (value) {
+                case 1:
+                    return "Disponível/Checkado";
+                case 2:
+                    return "Disponível/NaoCheckado";
+                case 3:
+                    return "Inpisponivel";
+                default:
+                    return "Disponível/Checkado";
             }
         }
 
@@ -167,7 +193,7 @@ Vue.mixin({
                 }
             );
 
-        }
+        },
     }
 });
 new Vue({

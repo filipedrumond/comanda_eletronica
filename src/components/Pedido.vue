@@ -379,7 +379,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import "../../sass/variables.scss";
 .pedido {
     border-bottom: 1px solid $black;
