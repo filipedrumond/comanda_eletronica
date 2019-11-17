@@ -69,7 +69,7 @@ router.beforeEach((to, from, next) => {
     var hasMesa = Vue.prototype.$session.exists("idMesa");
     var hasSession = Vue.prototype.$session.exists(Vue.prototype.IDSESSIONNAME);
 
-    var isAdmin = Vue.prototype.$session.exists(Vue.prototype.ADMINDATA);
+    var isAdmin = Vue.prototype.$session.has(Vue.prototype.ADMINDATA);
 
     $("body").removeClass("admin");
     if (isAdmin) {
