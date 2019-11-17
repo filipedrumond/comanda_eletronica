@@ -56,7 +56,7 @@ export default {
                         });
                         return;
                     }
-                    this.$session.set("dadosAdmin", response.body[0]);
+                    this.$session.set(this.ADMINDATA, response.body[0]);
                     this.$router.push({ path: "/admin/home" });
                 },
                 response => {

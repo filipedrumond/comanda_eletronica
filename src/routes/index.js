@@ -8,6 +8,7 @@ import Pedido from '../components/Pedido'
 
 import AdminLogin from '../components/admin/Login'
 import AdminHome from '../components/admin/Home'
+import AdminPedido from '../components/admin/Pedido'
 
 
 Vue.use(Router);
@@ -51,9 +52,14 @@ const router = new Router({
             component: AdminLogin,
         },
         {
-            path: '/admin/Home',
-            name: 'Home',
+            path: '/admin/home',
+            name: 'AdminHome',
             component: AdminHome,
+        },
+        {
+            path: '/admin/pedido',
+            name: 'AdminPedido',
+            component: AdminPedido,
         },
 
     ],
@@ -63,6 +69,12 @@ router.beforeEach((to, from, next) => {
     var hasMesa = Vue.prototype.$session.exists("idMesa");
     var hasSession = Vue.prototype.$session.exists(Vue.prototype.IDSESSIONNAME);
 
+    var isAdmin = Vue.prototype.$session.exists(Vue.prototype.ADMINDATA);
+
+    $("body").removeClass("admin");
+    if (isAdmin) {
+        $("body").addClass("admin");
+    }
     if (mesaRequired && (!hasMesa || !hasSession)) {
         next("/semMesa");
         return;

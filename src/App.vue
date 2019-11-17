@@ -17,7 +17,7 @@ export default {
         };
     },
     created: function() {
-        if(!this.$session.exists()){
+        if (!this.$session.exists()) {
             this.$session.start();
         }
         if (this.$session.has(this.USERNAME)) {
@@ -68,5 +68,21 @@ a {
 #app {
     padding-top: 42px;
     padding-bottom: 20px;
+}
+body {
+    .nav-comum {
+        display: block;
+    }
+    .nav-admin {
+        display: none;
+    }
+}
+body.admin {
+    .nav-comum {
+        display: none;
+    }
+    .nav-admin {
+        display: block;
+    }
 }
 </style>
