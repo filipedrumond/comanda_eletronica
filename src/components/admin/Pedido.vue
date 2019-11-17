@@ -1,5 +1,5 @@
 <template>
-    <div class="Pedido container"></div>
+    <div class="admin-pedido container"></div>
 </template>
 
 <script>

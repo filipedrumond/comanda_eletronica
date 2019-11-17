@@ -1,5 +1,5 @@
 <template>
-    <div class="AdminHome container">
+    <div class="admin-home container">
         <div class="botoes">
             <router-link :to="{ name: 'AdminPedido' }" class="botao bg-success">
                 <div class="texto">

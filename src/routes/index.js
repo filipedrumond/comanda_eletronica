@@ -67,13 +67,14 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     var mesaRequired = to.matched.some((route) => route.meta.mesa);
     var hasMesa = Vue.prototype.$session.exists("idMesa");
-    var hasSession = Vue.prototype.$session.exists(Vue.prototype.IDSESSIONNAME);
+    var hasSession = Vue.prototype.$session.exists("idSession");
 
-    var isAdmin = Vue.prototype.$session.has(Vue.prototype.ADMINDATA);
+    var isAdmin = VUE.prototype.$session.has("dadosAdmin");
 
     $("body").removeClass("admin");
     if (isAdmin) {
         $("body").addClass("admin");
+        console.log("logged like admin");
     }
     if (mesaRequired && (!hasMesa || !hasSession)) {
         next("/semMesa");
