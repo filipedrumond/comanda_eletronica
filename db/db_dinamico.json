@@ -110,7 +110,7 @@
       "hora": "11:45",
       "data": "2019-10-25",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 2,
+      "status": 3,
       "statusPagamento": 2,
       "id": 2
     },
@@ -135,7 +135,7 @@
       "hora": "17:8",
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 2,
+      "status": 6,
       "statusPagamento": 2,
       "id": 3
     },
@@ -251,7 +251,7 @@
       "hora": "17:9",
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 4,
+      "status": 2,
       "statusPagamento": 2,
       "id": 5
     },
@@ -931,7 +931,7 @@
       "hora": "21:43",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 2,
+      "status": 3,
       "statusPagamento": 2,
       "id": 17
     },

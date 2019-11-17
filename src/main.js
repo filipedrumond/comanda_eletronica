@@ -103,10 +103,14 @@ Vue.mixin({
                 case 1:
                     return "Aguardando Pagamento";
                 case 2:
-                    return "Em Preparo";
+                    return "Recebido"
                 case 3:
-                    return "Pronto";
+                    return "Em Preparo";
                 case 4:
+                    return "Pronto";
+                case 5:
+                    return "Revisar Pedido";
+                case 6:
                     return "Finalizado";
                 default:
                     return "Aguardando Pagamento";

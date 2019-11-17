@@ -4,6 +4,10 @@
             <button
                 v-for="status in statusPedidos"
                 v-bind:key="status.id"
+                :class="
+                    (filtroStatus == status.id ? 'btn-success' : 'btn-info') +
+                        ' btn '
+                "
                 @click="
                     () => {
                         filtroStatus = status.id;
@@ -34,7 +38,7 @@
             <div
                 v-for="pedido in mesa"
                 v-bind:key="pedido.id"
-                class="pedido col-6 mb-3"
+                class="pedido col-6 mb-3 border"
             >
                 <div class="d-flex align-items-baseline">
                     <div class="nome">
@@ -48,6 +52,32 @@
                             {{ pedido.hora }}
                         </b>
                     </div>
+                </div>
+                <div class="botoes d-flex mb-2">
+                    <button
+                        @click="editarPedido(2, pedido)"
+                        class="btn btn-warning"
+                    >
+                        RECEBIDO
+                    </button>
+                    <button
+                        @click="editarPedido(3, pedido)"
+                        class="btn btn-info"
+                    >
+                        EM PREPARO
+                    </button>
+                    <button
+                        @click="editarPedido(4, pedido)"
+                        class="btn btn-success"
+                    >
+                        PRONTO
+                    </button>
+                    <button
+                        @click="editarPedido(5, pedido)"
+                        class="btn btn-danger"
+                    >
+                        REVISAR
+                    </button>
                 </div>
                 <div class="pagamento">
                     <span>
@@ -65,7 +95,9 @@
                     >
                         <h5>
                             {{ prato.nome }}
-                            <span class="ml-3">
+                        </h5>
+                        <div>
+                            <span class="">
                                 {{
                                     getIngredientesRemovidos(prato.ingredientes)
                                         .length > 0
@@ -73,7 +105,7 @@
                                         : "Completo"
                                 }}
                             </span>
-                        </h5>
+                        </div>
                         <div class="row">
                             <div
                                 class="col-3 ingrediente d-flex"
@@ -105,29 +137,8 @@ export default {
         };
     },
     created: function() {
-        let url = `${this.DB_DINAMICO}pedidos`;
-        this.$http.get(url).then(
-            response => {
-                this.pedidos = response.body;
-                this.pedidosPorMesa = this.groupBy(response.body, "idMesa");
-            },
-            response => {
-                this.SimpleAlerts.error({
-                    title: "O BANCO MORREU NOS PEDIDOS"
-                });
-            }
-        );
-        url = `${this.DB_STATUS}pedidoStatus`;
-        this.$http.get(url).then(
-            response => {
-                this.statusPedidos = response.body;
-            },
-            response => {
-                this.SimpleAlerts.error({
-                    title: "O BANCO MORREU NOS STATUS DE PEDIDO"
-                });
-            }
-        );
+        this.loadPedidos();
+        this.loadPedidoStatus();
     },
     computed: {
         pedidosPorMesaPorStatus: function() {
@@ -144,6 +155,33 @@ export default {
         }
     },
     methods: {
+        loadPedidos: function() {
+            let url = `${this.DB_DINAMICO}pedidos`;
+            this.$http.get(url).then(
+                response => {
+                    this.pedidos = response.body;
+                    this.pedidosPorMesa = this.groupBy(response.body, "idMesa");
+                },
+                response => {
+                    this.SimpleAlerts.error({
+                        title: "O BANCO MORREU NOS PEDIDOS"
+                    });
+                }
+            );
+        },
+        loadPedidoStatus: function() {
+            let url = `${this.DB_STATUS}pedidoStatus`;
+            this.$http.get(url).then(
+                response => {
+                    this.statusPedidos = response.body;
+                },
+                response => {
+                    this.SimpleAlerts.error({
+                        title: "O BANCO MORREU NOS STATUS DE PEDIDO"
+                    });
+                }
+            );
+        },
         print: function() {
             console.log(this.pedidosPorMesaPorStatus);
         },
@@ -157,6 +195,20 @@ export default {
             return ingredientes.filter(ele => {
                 return ele.status == 2;
             });
+        },
+        editarPedido: function(status, pedido) {
+            let url = `${this.DB_DINAMICO}pedidos/${pedido.id}`;
+            let data = pedido;
+            data.status = status;
+            this.$http.put(url, data).then(
+                response => {
+                    console.log("PEDIDO ATUALIZADO");
+                    this.loadPedidos();
+                },
+                response => {
+                    console.log("PEDIDO ERRO");
+                }
+            );
         }
     }
 };

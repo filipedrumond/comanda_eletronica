@@ -16,9 +16,11 @@
     ],
     "pedidoStatus": [
         {"id": 1,"status": "Aguardando Pagamento"},
-        {"id": 2,"status": "Em Preparo"},
-        {"id": 3,"status": "Pronto"},
-        {"id": 4,"status": "Finalizado"}
+        {"id": 2,"status": "Recebido"},
+        {"id": 3,"status": "Em Preparo"},
+        {"id": 4,"status": "Pronto"},
+        {"id": 5,"status": "Revisar Pedido"},
+        {"id": 6,"status": "Finalizado"}
     ],
     "pagamentoStatus": [
         {"id": 1,"status": "Aguardando Pagamento"},
