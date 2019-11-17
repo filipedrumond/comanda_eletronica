@@ -349,48 +349,6 @@ export default {
             return soma;
         }
     },
-    filters: {
-        handlerStatusPrato: function(value) {
-            switch (value) {
-                case 1:
-                    return "fa fa-usd";
-                case 2:
-                    return "fa fa-hourglass-half";
-                case 3:
-                    return "fa fa-check";
-                case 4:
-                    return "fa fa-ticket";
-                default:
-                    return "fa fa-usd";
-            }
-        },
-        handlerStatusPratoStr: function(value) {
-            switch (value) {
-                case 1:
-                    return "Aguardando Pagamento";
-                case 2:
-                    return "Em Preparo";
-                case 3:
-                    return "Pronto";
-                case 4:
-                    return "Finalizado";
-                default:
-                    return "Aguardando Pagamento";
-            }
-        },
-        handlerStatusPagamentoStr: function(value) {
-            switch (value) {
-                case 1:
-                    return "Aguardando Pagamento";
-                case 2:
-                    return "Pago com cartão";
-                case 3:
-                    return "Pago no caixa";
-                default:
-                    return "Aguardando Pagamento";
-            }
-        }
-    },
     created: function() {
         let url = `${this.DB_DINAMICO}pedidos?${
             this.IDSESSIONNAME

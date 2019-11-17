@@ -7,11 +7,22 @@ export default {
     name: "AdminPedido",
     data() {
         return {
-            validation: true
+            pedidos: []
         };
     },
     created: function() {
-        console.log("Created");
+        // let url = `${this.DB_DINAMICO}pedidos`;
+        // this.$http.get(url).then(
+        //     response => {
+        //         this.pedidos = response.body;
+        //         console.log(response.body);
+        //     },
+        //     response => {
+        //         this.SimpleAlerts.error({
+        //             title: "O BANCO MORREU NOS PEDIDOS"
+        //         });
+        //     }
+        // );
     },
     computed: {},
     methods: {}
