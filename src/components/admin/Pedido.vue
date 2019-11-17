@@ -66,21 +66,24 @@
                         <h5>
                             {{ prato.nome }}
                             <span class="ml-3">
-                                {{getIngredientesRemovidos(prato.ingredientes).length > 0 ?"REMOVIDO ->":"Completo"}}
+                                {{
+                                    getIngredientesRemovidos(prato.ingredientes)
+                                        .length > 0
+                                        ? "REMOVIDO ->"
+                                        : "Completo"
+                                }}
                             </span>
                         </h5>
                         <div class="row">
                             <div
                                 class="col-3 ingrediente d-flex"
-                                v-for="ingrediente in getIngredientesRemovidos(prato.ingredientes)"
+                                v-for="ingrediente in getIngredientesRemovidos(
+                                    prato.ingredientes
+                                )"
                                 v-bind:key="ingrediente.id"
                             >
-                                    <i
-                                        class="fa fa-circle"
-                                        aria-hidden="true"
-                                    ></i>
-                                    {{ ingrediente.ingrediente }}
-                                </div>
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                {{ ingrediente.ingrediente }}
                             </div>
                         </div>
                     </div>
