@@ -32,6 +32,7 @@ Vue.mixin({
             DB_PAGAMENTOS: "http://localhost:8018/",
             DB_ADMIN: "http://localhost:8019/",
             DB_LOG: "http://localhost:8020/",
+            SAVE_PHOTO: "http://localhost:8085/saveFile.php",
             IDSESSIONNAME: "idSession",
             ADMINDATA: "dadosAdmin",
             DEFAULTPATH: "#/",

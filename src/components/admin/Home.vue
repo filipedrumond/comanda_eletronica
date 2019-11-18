@@ -9,7 +9,10 @@
                     <i class="fa fa-usd" aria-hidden="true"></i>
                 </div>
             </router-link>
-            <router-link :to="{ name: 'home' }" class="botao bg-danger">
+            <router-link
+                :to="{ name: 'AdminCardapio' }"
+                class="botao bg-danger"
+            >
                 <div class="texto">
                     Cardápio
                 </div>

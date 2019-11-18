@@ -9,6 +9,7 @@ import Pedido from '../components/Pedido'
 import AdminLogin from '../components/admin/Login'
 import AdminHome from '../components/admin/Home'
 import AdminPedido from '../components/admin/Pedido'
+import AdminCardapio from '../components/admin/Cardapio'
 
 
 Vue.use(Router);
@@ -60,6 +61,11 @@ const router = new Router({
             path: '/admin/pedido',
             name: 'AdminPedido',
             component: AdminPedido,
+        },
+        {
+            path: '/admin/cardapio',
+            name: 'AdminCardapio',
+            component: AdminCardapio,
         },
 
     ],

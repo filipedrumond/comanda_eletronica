@@ -26,7 +26,9 @@
                     <router-link :to="{ name: 'AdminPedido' }">PED</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'comanda' }">CARD</router-link>
+                    <router-link :to="{ name: 'AdminCardapio' }"
+                        >CARD</router-link
+                    >
                 </li>
                 <li>
                     <router-link :to="{ name: 'comanda' }">STATS</router-link>
