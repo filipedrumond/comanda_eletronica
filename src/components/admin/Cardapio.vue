@@ -1,7 +1,7 @@
 <template>
     <div class="admin-cardapio container">
         <div class="row">
-            <button @click="enviarDados()">ENVIAR</button>
+            <button @click="enviarDados()" class="btn-prevent">ENVIAR</button>
             <form action="" class="form-cardapio" id="form-cardapio">
                 <input type="file" name="inputThumbnail" id="inputThumbnail" />
 
@@ -117,7 +117,7 @@ export default {
     },
     computed: {},
     methods: {
-        enviarFoto: function() {
+        enviarFoto: function(callback) {
             let $vue = this;
             let url = `${this.SAVE_PHOTO}`;
             let formData = new FormData(
@@ -129,7 +129,8 @@ export default {
                 type: "POST",
                 data: formData,
                 success: function(data) {
-                    $vue.retornoFoto = data;
+                    $vue.retornoFoto = JSON.parse(data);
+                    callback();
                 },
                 cache: false,
                 contentType: false,
@@ -152,12 +153,26 @@ export default {
             });
         },
         enviarDados: function() {
-            this.enviarFoto();
-            if (!this.retornoFoto)
-                this.SimpleAlerts.error({ text: "Escolha uma foto" });
-            let prato = this.mountPrato();
-            console.log(this.retornoFoto);
-            // prato.imgs = [retornoFoto.nomeAleatorio];
+            let $vue = this;
+            this.enviarFoto(() => {
+                if (!this.retornoFoto)
+                    this.SimpleAlerts.error({ text: "Escolha uma foto" });
+                let prato = this.mountPrato();
+                prato.imgs = [this.retornoFoto.nomeAleatorio];
+                let url = `${this.DB_CARDAPIO}cardapio`;
+                let data = prato;
+                this.$http.post(url, data).then(
+                    response => {
+                        this.SimpleAlerts.success({ title: "Prato Criado" });
+                    },
+                    response => {
+                        this.SimpleAlerts.error({
+                            title: "O BANCO AO SALVAR O PRATO"
+                        });
+                    }
+                );
+                console.log(prato);
+            });
         },
         mountPrato: function() {
             let $vue = this;
@@ -185,7 +200,8 @@ export default {
                 nome: $form.find("input[name='nome']").val(),
                 descricao: $form.find("input[name='descricao']").val(),
                 valor: parseFloat($form.find("input[name='valor']").val()),
-                ingredientes: ingredientes
+                ingredientes: ingredientes,
+                status: 1
             };
 
             return prato;

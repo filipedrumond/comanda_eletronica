@@ -28,7 +28,7 @@ if (isset($_FILES['inputThumbnail'])){
 		
 		//Movendo arquivo para servidor
 		
-		if (!move_uploaded_file($tmp,$caminho.$nome_arquivo)){
+		if (!move_uploaded_file($tmp,$caminho.$nomeAleatorio)){
 			$erro = 'Não foi possível anexar o arquivo!';
 		}else{
 			$result = [
