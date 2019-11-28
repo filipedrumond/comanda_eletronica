@@ -27,137 +27,140 @@
   ],
   "cardapio": [
     {
-      "nome": "MIOJO",
-      "descricao": "MIOJO COMPLETASSO CABULOSO",
+      "nome": "Macarrão ao molho sugo",
+      "descricao": "Macarrão espaguete com molho de tomate",
       "categoria": "Prato Principal",
-      "valor": 2.5,
+      "valor": 8.5,
+      "ingredientes": [
+        {
+          "ingrediente": "Queijo",
+          "status": 1
+        },
+        {
+          "ingrediente": "Bacon",
+          "status": 1
+        }
+      ],
       "status": 1,
-      "ingredientes": [
-        {
-          "id": 1,
-          "ingrediente": "Cebola",
-          "status": 1
-        },
-        {
-          "id": 2,
-          "ingrediente": "Pimenta",
-          "status": 1
-        },
-        {
-          "id": 3,
-          "ingrediente": "Miojo",
-          "status": 1
-        },
-        {
-          "id": 4,
-          "ingrediente": "Tempero",
-          "status": 1
-        }
-      ],
       "imgs": [
-        "607349.png",
-        "images.jpg"
+        "a39f2068a421879f4e3bf0e612141fb6.jpg"
       ],
-      "id": 1
+      "id": 7
     },
     {
-      "nome": "MIOJO56",
-      "descricao": "MIOJO COMPLETASSO CABULOSO",
-      "categoria": "Tira Gosto",
-      "valor": 2.5,
-      "status": 2,
-      "ingredientes": [
-        {
-          "id": 1,
-          "ingrediente": "Cebola",
-          "status": 1
-        },
-        {
-          "id": 2,
-          "ingrediente": "Pimenta",
-          "status": 1
-        },
-        {
-          "id": 3,
-          "ingrediente": "Miojo",
-          "status": 1
-        },
-        {
-          "id": 4,
-          "ingrediente": "Tempero",
-          "status": 1
-        }
-      ],
-      "imgs": [
-        "607349.png",
-        "images.jpg"
-      ],
-      "id": 2
-    },
-    {
-      "nome": "MIOJO3",
-      "descricao": "MIOJO COMPLETASSO CABULOSO",
-      "categoria": "Entrada",
-      "valor": 2.5,
-      "status": 3,
-      "ingredientes": [
-        {
-          "id": 1,
-          "ingrediente": "Cebola",
-          "status": 1
-        },
-        {
-          "id": 2,
-          "ingrediente": "Pimenta",
-          "status": 1
-        },
-        {
-          "id": 3,
-          "ingrediente": "Miojo",
-          "status": 1
-        },
-        {
-          "id": 4,
-          "ingrediente": "Tempero",
-          "status": 1
-        }
-      ],
-      "imgs": [
-        "607349.png",
-        "images.jpg"
-      ],
-      "id": 3
-    },
-    {
-      "nome": "DOLLY GUARANÁ",
-      "descricao": "Bebida refrescante sabor guaraná",
-      "categoria": "Bebida",
-      "valor": 3.5,
-      "status": 1,
+      "nome": "Coca Cola Lata",
+      "descricao": "Coca cola lata de 350ML",
+      "valor": 4.5,
       "ingredientes": [],
+      "status": 1,
+      "categoria": "Bebida",
       "imgs": [
-        "images.jpg"
+        "fa5bca4503b8aabc00fa55c640b482a3.jpg"
       ],
-      "id": 4
+      "id": 8
     },
     {
-      "nome": "PATO DE BORRACHA",
-      "descricao": "Pato de borracha",
-      "valor": 2.5,
+      "nome": "Feijoada",
+      "descricao": "Prato de feijoada, acompanha arroz, farofa",
+      "categoria": "Prato Principal",
+      "valor": 11,
       "ingredientes": [
         {
-          "ingrediente": "Pato",
+          "ingrediente": "Laranja",
           "status": 1
         },
         {
-          "ingrediente": "borracha",
+          "ingrediente": "Carnes Gordas",
           "status": 1
         }
       ],
+      "status": 1,
       "imgs": [
-        "8ee42b88b47a9187ad795856ba06254e.jpg"
+        "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
       ],
-      "id": 6
+      "id": 9
+    },
+    {
+      "nome": "Suco Natural de Laranja",
+      "descricao": "Suco Natural de Laranja",
+      "valor": 5,
+      "categoria": "Bebida",
+      "ingredientes": [
+        {
+          "ingrediente": "Gelo",
+          "status": 1
+        },
+        {
+          "ingrediente": "Açúcar",
+          "status": 1
+        }
+      ],
+      "status": 1,
+      "imgs": [
+        "845127f536137e5a3b425a9e31079933.jpg"
+      ],
+      "id": 10
+    },
+    {
+      "nome": "Caldo de Mandioca",
+      "descricao": "Caldo de mandioca com frango e bacon",
+      "valor": 4.75,
+      "ingredientes": [
+        {
+          "ingrediente": "Cebolinha",
+          "status": 1
+        },
+        {
+          "ingrediente": "Torresmo",
+          "status": 1
+        },
+        {
+          "ingrediente": "Salsinha",
+          "status": 1
+        }
+      ],
+      "status": 1,
+      "categoria": "Prato Principal",
+      "imgs": [
+        "c7dc10d0b4ae3deefdf6972c6b09ac03.jpg"
+      ],
+      "id": 11
+    },
+    {
+      "nome": "Cachorro Quente",
+      "descricao": "Cachorro quente com pão, salsicha e molho de tomate",
+      "valor": 5.7,
+      "ingredientes": [
+        {
+          "ingrediente": "Bacon",
+          "status": 1
+        },
+        {
+          "ingrediente": "Salsicha Extra",
+          "status": 2
+        },
+        {
+          "ingrediente": "Frango com catupiri",
+          "status": 1
+        },
+        {
+          "ingrediente": "Uva Passa",
+          "status": 1
+        },
+        {
+          "ingrediente": "Vinagrete",
+          "status": 1
+        },
+        {
+          "ingrediente": "Batata Palha",
+          "status": 1
+        }
+      ],
+      "status": 1,
+      "imgs": [
+        "bf57f7ba107cd19bf19ecdc286d8d7a2.jpg"
+      ],
+      "id": 12
     }
   ]
 }

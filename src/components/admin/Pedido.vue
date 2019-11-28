@@ -133,7 +133,7 @@ export default {
             pedidos: [],
             statusPedidos: [],
             pedidosPorMesa: [],
-            filtroStatus: 4
+            filtroStatus: 2
         };
     },
     created: function() {

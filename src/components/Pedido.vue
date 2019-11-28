@@ -35,7 +35,7 @@
                 >
                     <div class="mr-2">
                         <small>
-                            {{ pedido.status | handlerStatusPratoStr }}
+                            {{ pedido.status | handlerStatusPedidotr }}
                         </small>
                     </div>
                     <div class="">
@@ -334,8 +334,10 @@ export default {
                 case 2:
                     return "fa fa-hourglass-half";
                 case 3:
-                    return "fa fa-check";
+                    return "fa fa-hourglass-half";
                 case 4:
+                    return "fa fa-check";
+                case 5:
                     return "fa fa-ticket";
                 default:
                     return "fa fa-usd";
@@ -353,17 +355,29 @@ export default {
         let url = `${this.DB_DINAMICO}pedidos?${
             this.IDSESSIONNAME
         }=${this.$session.get(this.IDSESSIONNAME)}`;
+        let $VUE = this;
         this.$http.get(url).then(
             response => {
                 this.pedidos = response.body;
+            // console.log(response.body);
+        },
+            response => {
+            this.SimpleAlerts.error({
+                title: "O BANCO MORREU NOS PEDIDOS"
+            });
+        });
+        setInterval(function(){
+            $VUE.$http.get(url).then(
+                response => {
+                    $VUE.pedidos = response.body;
                 // console.log(response.body);
             },
             response => {
-                this.SimpleAlerts.error({
+                $VUE.SimpleAlerts.error({
                     title: "O BANCO MORREU NOS PEDIDOS"
                 });
-            }
-        );
+            });
+        },200);
     },
     updated() {
         $(".item")
@@ -472,12 +486,19 @@ export default {
     background-color: $bDanger;
 }
 .pedido-status-2 {
-    background-color: $bInfo;
+    background-color: $gold;
+    color: $black;
+    i {
+        color: $black;
+    }
 }
 .pedido-status-3 {
-    background-color: $bSuccess;
+    background-color: $bInfo;
 }
 .pedido-status-4 {
+    background-color: $bSuccess;
+}
+.pedido-status-5 {
     background-color: $gold;
     color: $black;
     i {

@@ -6,9 +6,9 @@
                 <li>
                     <router-link :to="{ name: 'pedido' }">PEDIDOS</router-link>
                 </li>
-                <li>
+                <!-- <li>
                     <router-link :to="{ name: 'comanda' }">COMANDA</router-link>
-                </li>
+                </li> -->
                 <li>
                     <router-link
                         :to="{ name: 'mesa', params: { idMesa: idMesa } }"

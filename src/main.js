@@ -26,13 +26,13 @@ Vue.config.productionTip = false;
 Vue.mixin({
     data: function () {
         return {
-            DB_CARDAPIO: "http://localhost:8015/",
-            DB_DINAMICO: "http://localhost:8016/",
-            DB_STATUS: "http://localhost:8017/",
-            DB_PAGAMENTOS: "http://localhost:8018/",
-            DB_ADMIN: "http://localhost:8019/",
-            DB_LOG: "http://localhost:8020/",
-            SAVE_PHOTO: "http://localhost:8085/saveFile.php",
+            DB_CARDAPIO: "http://192.168.43.220:8015/",
+            DB_DINAMICO: "http://192.168.43.220:8016/",
+            DB_STATUS: "http://192.168.43.220:8017/",
+            DB_PAGAMENTOS: "http://192.168.43.220:8018/",
+            DB_ADMIN: "http://192.168.43.220:8019/",
+            DB_LOG: "http://192.168.43.220:8020/",
+            SAVE_PHOTO: "http://192.168.43.220:8085/saveFile.php",
             IDSESSIONNAME: "idSession",
             ADMINDATA: "dadosAdmin",
             DEFAULTPATH: "#/",

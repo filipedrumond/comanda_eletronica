@@ -53,7 +53,7 @@
       "hora": "11:15",
       "data": "2019-10-25",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 1
     },
@@ -110,7 +110,7 @@
       "hora": "11:45",
       "data": "2019-10-25",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 3,
+      "status": 5,
       "statusPagamento": 2,
       "id": 2
     },
@@ -194,7 +194,7 @@
       "hora": "17:9",
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 3,
+      "status": 5,
       "statusPagamento": 3,
       "id": 4
     },
@@ -251,7 +251,7 @@
       "hora": "17:9",
       "data": "25 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 5
     },
@@ -298,7 +298,7 @@
       "hora": "16:40",
       "data": "28 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 6
     },
@@ -345,7 +345,7 @@
       "hora": "21:39",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 7
     },
@@ -370,7 +370,7 @@
       "hora": "21:39",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 8
     },
@@ -485,7 +485,7 @@
       "hora": "21:40",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 9
     },
@@ -544,7 +544,7 @@
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
       "idMesa": 1,
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 10
     },
@@ -556,7 +556,7 @@
       "hora": "21:40",
       "data": "28 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 11
     },
@@ -615,7 +615,7 @@
       "hora": "21:40",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 2,
+      "status": 5,
       "statusPagamento": 2,
       "id": 12
     },
@@ -626,7 +626,7 @@
       "hora": "21:41",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "idMesa": 1,
       "id": 13
@@ -754,7 +754,7 @@
       "hora": "21:41",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 14
     },
@@ -779,7 +779,7 @@
       "hora": "21:41",
       "data": "28 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 15
     },
@@ -872,7 +872,7 @@
       "hora": "21:42",
       "data": "28 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 16
     },
@@ -931,7 +931,7 @@
       "hora": "21:43",
       "data": "28 - 10 - 2019",
       "fusoHorario": "-03",
-      "status": 3,
+      "status": 5,
       "statusPagamento": 2,
       "id": 17
     },
@@ -978,9 +978,1119 @@
       "hora": "21:43",
       "data": "28 - 10 - 2019",
       "fusoHorario": "Horário Padrão de Brasília",
-      "status": 1,
+      "status": 5,
       "statusPagamento": 1,
       "id": 18
+    },
+    {
+      "pratos": [
+        {
+          "nome": "PATO DE BORRACHA",
+          "descricao": "Pato de borracha",
+          "valor": 2.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Pato",
+              "status": 1
+            },
+            {
+              "ingrediente": "borracha",
+              "status": 1
+            }
+          ],
+          "imgs": [
+            "8ee42b88b47a9187ad795856ba06254e.jpg"
+          ],
+          "id": 6
+        }
+      ],
+      "idSession": "0971333028759273909571371222673679 ** 18-11-2019 * 21:20",
+      "nome": "Rafael",
+      "idMesa": "1",
+      "hora": "21:21",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 5,
+      "statusPagamento": 2,
+      "id": 19
+    },
+    {
+      "pratos": [
+        {
+          "nome": "DOLLY GUARANÁ",
+          "descricao": "Bebida refrescante sabor guaraná",
+          "categoria": "Bebida",
+          "valor": 3.5,
+          "status": 1,
+          "ingredientes": [],
+          "imgs": [
+            "images.jpg"
+          ],
+          "id": 4
+        },
+        {
+          "nome": "PATO DE BORRACHA",
+          "descricao": "Pato de borracha",
+          "valor": 2.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Pato",
+              "status": 2
+            },
+            {
+              "ingrediente": "borracha",
+              "status": 1
+            }
+          ],
+          "imgs": [
+            "8ee42b88b47a9187ad795856ba06254e.jpg"
+          ],
+          "id": 6
+        }
+      ],
+      "idSession": "0971333028759273909571371222673679 ** 18-11-2019 * 21:20",
+      "nome": "Rafael",
+      "idMesa": "1",
+      "hora": "21:28",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 5,
+      "statusPagamento": 2,
+      "id": 20
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        },
+        {
+          "nome": "Suco Natural de Laranja",
+          "descricao": "Suco Natural de Laranja",
+          "valor": 5,
+          "categoria": "Bebida",
+          "ingredientes": [
+            {
+              "ingrediente": "Gelo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Açúcar",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "845127f536137e5a3b425a9e31079933.jpg"
+          ],
+          "id": 10
+        },
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        }
+      ],
+      "idSession": "0971333028759273909571371222673679 ** 18-11-2019 * 21:20",
+      "nome": "Rafael",
+      "idMesa": "1",
+      "hora": "21:45",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 3,
+      "statusPagamento": 2,
+      "id": 21
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Cachorro Quente",
+          "descricao": "Cachorro quente com pão, salsicha e molho de tomate",
+          "valor": 5.7,
+          "ingredientes": [
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsicha Extra",
+              "status": 2
+            },
+            {
+              "ingrediente": "Frango com catupiri",
+              "status": 1
+            },
+            {
+              "ingrediente": "Uva Passa",
+              "status": 1
+            },
+            {
+              "ingrediente": "Vinagrete",
+              "status": 1
+            },
+            {
+              "ingrediente": "Batata Palha",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "bf57f7ba107cd19bf19ecdc286d8d7a2.jpg"
+          ],
+          "id": 12
+        },
+        {
+          "nome": "Caldo de Mandioca",
+          "descricao": "Caldo de mandioca com frango e bacon",
+          "valor": 4.75,
+          "ingredientes": [
+            {
+              "ingrediente": "Cebolinha",
+              "status": 1
+            },
+            {
+              "ingrediente": "Torresmo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsinha",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "categoria": "Prato Principal",
+          "imgs": [
+            "c7dc10d0b4ae3deefdf6972c6b09ac03.jpg"
+          ],
+          "id": 11
+        },
+        {
+          "nome": "Suco Natural de Laranja",
+          "descricao": "Suco Natural de Laranja",
+          "valor": 5,
+          "categoria": "Bebida",
+          "ingredientes": [
+            {
+              "ingrediente": "Gelo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Açúcar",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "845127f536137e5a3b425a9e31079933.jpg"
+          ],
+          "id": 10
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        },
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        }
+      ],
+      "idSession": "0172578834932728306635000181438473 ** 18-11-2019 * 22:0",
+      "nome": "Odin da Silva Damasceno Campos Moreira Beethoven",
+      "idMesa": 1,
+      "hora": "22:0",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 4,
+      "statusPagamento": 2,
+      "id": 22
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        },
+        {
+          "nome": "Cachorro Quente",
+          "descricao": "Cachorro quente com pão, salsicha e molho de tomate",
+          "valor": 5.7,
+          "ingredientes": [
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsicha Extra",
+              "status": 1
+            },
+            {
+              "ingrediente": "Frango com catupiri",
+              "status": 1
+            },
+            {
+              "ingrediente": "Uva Passa",
+              "status": 2
+            },
+            {
+              "ingrediente": "Vinagrete",
+              "status": 2
+            },
+            {
+              "ingrediente": "Batata Palha",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "bf57f7ba107cd19bf19ecdc286d8d7a2.jpg"
+          ],
+          "id": 12
+        }
+      ],
+      "idSession": "0971333028759273909571371222673679 ** 18-11-2019 * 21:20",
+      "nome": "Rafael",
+      "idMesa": "1",
+      "hora": "22:0",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 4,
+      "statusPagamento": 2,
+      "id": 23
+    },
+    {
+      "pratos": [],
+      "idSession": "0967928775483872406801609539466481 ** 18-11-2019 * 22:11",
+      "nome": "Professor",
+      "idMesa": "3",
+      "hora": "22:11",
+      "data": "18 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 3,
+      "statusPagamento": 1,
+      "id": 24
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        },
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        }
+      ],
+      "idSession": "0975204489435890302201955274224845 ** 26-11-2019 * 21:29",
+      "nome": "Rafael Castro",
+      "idMesa": 1,
+      "hora": "21:30",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 3,
+      "statusPagamento": 2,
+      "id": 25
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        }
+      ],
+      "idSession": "0223481710371725708367024362266577 ** 26-11-2019 * 21:29",
+      "nome": "Filipe",
+      "idMesa": 1,
+      "hora": "21:30",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 5,
+      "statusPagamento": 2,
+      "id": 26
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        }
+      ],
+      "idSession": "0223481710371725708367024362266577 ** 26-11-2019 * 21:29",
+      "nome": "Filipe",
+      "idMesa": 1,
+      "hora": "21:31",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 5,
+      "statusPagamento": 2,
+      "id": 27
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        }
+      ],
+      "idSession": "0988573458733868807391235375276552 ** 26-11-2019 * 21:32",
+      "nome": "jjj",
+      "idMesa": 1,
+      "hora": "21:32",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 4,
+      "statusPagamento": 1,
+      "id": 28
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Caldo de Mandioca",
+          "descricao": "Caldo de mandioca com frango e bacon",
+          "valor": 4.75,
+          "ingredientes": [
+            {
+              "ingrediente": "Cebolinha",
+              "status": 1
+            },
+            {
+              "ingrediente": "Torresmo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsinha",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "categoria": "Prato Principal",
+          "imgs": [
+            "c7dc10d0b4ae3deefdf6972c6b09ac03.jpg"
+          ],
+          "id": 11
+        },
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        }
+      ],
+      "idSession": "0313781458059061903897949121875659 ** 26-11-2019 * 21:34",
+      "nome": "Rafael Castro",
+      "idMesa": "1",
+      "hora": "21:35",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 5,
+      "statusPagamento": 2,
+      "id": 29
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        }
+      ],
+      "idSession": "0313781458059061903897949121875659 ** 26-11-2019 * 21:34",
+      "nome": "Rafael Castro",
+      "idMesa": "1",
+      "hora": "21:36",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 5,
+      "statusPagamento": 1,
+      "id": 30
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 2
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        },
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        }
+      ],
+      "idSession": "0223481710371725708367024362266577 ** 26-11-2019 * 21:29",
+      "nome": "Filipe",
+      "idMesa": 1,
+      "hora": "21:45",
+      "data": "26 - 11 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 4,
+      "statusPagamento": 2,
+      "id": 31
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 2
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        },
+        {
+          "nome": "Suco Natural de Laranja",
+          "descricao": "Suco Natural de Laranja",
+          "valor": 5,
+          "categoria": "Bebida",
+          "ingredientes": [
+            {
+              "ingrediente": "Gelo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Açúcar",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "845127f536137e5a3b425a9e31079933.jpg"
+          ],
+          "id": 10
+        }
+      ],
+      "idSession": "0765961527207520307906674513599571 ** 27-11-2019 * 18:46",
+      "nome": "Rafael Castro",
+      "idMesa": "3",
+      "hora": "18:47",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "statusPagamento": 2,
+      "id": 32
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        }
+      ],
+      "idSession": "0765961527207520307906674513599571 ** 27-11-2019 * 18:46",
+      "nome": "Rafael Castro",
+      "idMesa": "1",
+      "hora": "18:48",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "statusPagamento": 2,
+      "id": 33
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Cachorro Quente",
+          "descricao": "Cachorro quente com pão, salsicha e molho de tomate",
+          "valor": 5.7,
+          "ingredientes": [
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsicha Extra",
+              "status": 2
+            },
+            {
+              "ingrediente": "Frango com catupiri",
+              "status": 1
+            },
+            {
+              "ingrediente": "Uva Passa",
+              "status": 1
+            },
+            {
+              "ingrediente": "Vinagrete",
+              "status": 1
+            },
+            {
+              "ingrediente": "Batata Palha",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "bf57f7ba107cd19bf19ecdc286d8d7a2.jpg"
+          ],
+          "id": 12
+        },
+        {
+          "nome": "Caldo de Mandioca",
+          "descricao": "Caldo de mandioca com frango e bacon",
+          "valor": 4.75,
+          "ingredientes": [
+            {
+              "ingrediente": "Cebolinha",
+              "status": 1
+            },
+            {
+              "ingrediente": "Torresmo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsinha",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "categoria": "Prato Principal",
+          "imgs": [
+            "c7dc10d0b4ae3deefdf6972c6b09ac03.jpg"
+          ],
+          "id": 11
+        }
+      ],
+      "idSession": "0765961527207520307906674513599571 ** 27-11-2019 * 18:46",
+      "nome": "Rafael Castro",
+      "idMesa": "2",
+      "hora": "18:49",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 2,
+      "statusPagamento": 2,
+      "id": 34
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        }
+      ],
+      "idSession": "050148700270155460822697447061576 ** 27-11-2019 * 19:11",
+      "nome": "Petrônio ",
+      "idMesa": 1,
+      "hora": "19:12",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 1,
+      "statusPagamento": 1,
+      "id": 35
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Coca Cola Lata",
+          "descricao": "Coca cola lata de 350ML",
+          "valor": 4.5,
+          "ingredientes": [],
+          "status": 1,
+          "categoria": "Bebida",
+          "imgs": [
+            "fa5bca4503b8aabc00fa55c640b482a3.jpg"
+          ],
+          "id": 8
+        },
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        }
+      ],
+      "idSession": "0194882650255726040832944152981332 ** 27-11-2019 * 19:11",
+      "nome": "Osmar",
+      "idMesa": "3",
+      "hora": "19:13",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 4,
+      "statusPagamento": 1,
+      "id": 36
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Feijoada",
+          "descricao": "Prato de feijoada, acompanha arroz, farofa",
+          "categoria": "Prato Principal",
+          "valor": 11,
+          "ingredientes": [
+            {
+              "ingrediente": "Laranja",
+              "status": 1
+            },
+            {
+              "ingrediente": "Carnes Gordas",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "8ed2f6bc81b59dc46fbe6839e994efbc.jpg"
+          ],
+          "id": 9
+        },
+        {
+          "nome": "Suco Natural de Laranja",
+          "descricao": "Suco Natural de Laranja",
+          "valor": 5,
+          "categoria": "Bebida",
+          "ingredientes": [
+            {
+              "ingrediente": "Gelo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Açúcar",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "845127f536137e5a3b425a9e31079933.jpg"
+          ],
+          "id": 10
+        }
+      ],
+      "idSession": "04336639598560403403107766304988251 ** 27-11-2019 * 18:11",
+      "nome": "Diego",
+      "idMesa": "2",
+      "hora": "18:13",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "Horário Padrão de Brasília",
+      "status": 4,
+      "statusPagamento": 1,
+      "id": 37
+    },
+    {
+      "pratos": [
+        {
+          "nome": "Macarrão ao molho sugo",
+          "descricao": "Macarrão espaguete com molho de tomate",
+          "categoria": "Prato Principal",
+          "valor": 8.5,
+          "ingredientes": [
+            {
+              "ingrediente": "Queijo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "a39f2068a421879f4e3bf0e612141fb6.jpg"
+          ],
+          "id": 7
+        },
+        {
+          "nome": "Suco Natural de Laranja",
+          "descricao": "Suco Natural de Laranja",
+          "valor": 5,
+          "categoria": "Bebida",
+          "ingredientes": [
+            {
+              "ingrediente": "Gelo",
+              "status": 1
+            },
+            {
+              "ingrediente": "Açúcar",
+              "status": 2
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "845127f536137e5a3b425a9e31079933.jpg"
+          ],
+          "id": 10
+        },
+        {
+          "nome": "Cachorro Quente",
+          "descricao": "Cachorro quente com pão, salsicha e molho de tomate",
+          "valor": 5.7,
+          "ingredientes": [
+            {
+              "ingrediente": "Bacon",
+              "status": 1
+            },
+            {
+              "ingrediente": "Salsicha Extra",
+              "status": 2
+            },
+            {
+              "ingrediente": "Frango com catupiri",
+              "status": 1
+            },
+            {
+              "ingrediente": "Uva Passa",
+              "status": 1
+            },
+            {
+              "ingrediente": "Vinagrete",
+              "status": 1
+            },
+            {
+              "ingrediente": "Batata Palha",
+              "status": 1
+            }
+          ],
+          "status": 1,
+          "imgs": [
+            "bf57f7ba107cd19bf19ecdc286d8d7a2.jpg"
+          ],
+          "id": 12
+        }
+      ],
+      "idSession": "0194882650255726040832944152981332 ** 27-11-2019 * 19:11",
+      "nome": "Osmar",
+      "idMesa": "3",
+      "hora": "19:16",
+      "data": "27 - 11 - 2019",
+      "fusoHorario": "-03",
+      "status": 1,
+      "statusPagamento": 1,
+      "id": 38
     }
   ],
   "comandas": [
@@ -996,6 +2106,26 @@
   "mesas": [
     {
       "id": 1,
+      "status": 1,
+      "sessions": [
+        {
+          "idSession": 1,
+          "nome": "Filipe"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "status": 1,
+      "sessions": [
+        {
+          "idSession": 1,
+          "nome": "Filipe"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "status": 1,
       "sessions": [
         {

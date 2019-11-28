@@ -28,7 +28,7 @@
                 </div>
                 <div class="ingredientes">
                     <div
-                        v-for="index in 4"
+                        v-for="index in 24"
                         v-bind:key="index"
                         :class="'ingrediente ingrediente-' + index"
                     >
@@ -43,9 +43,6 @@
                         </select>
                     </div>
                 </div>
-                <button @click="enviarFoto()" class="btn-prevent">
-                    ENVIAR FOTO
-                </button>
             </form>
         </div>
         {{ lastPratoId }}
