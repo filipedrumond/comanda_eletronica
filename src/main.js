@@ -25,14 +25,15 @@ Vue.config.productionTip = false;
 /* global mixin */
 Vue.mixin({
     data: function () {
+        let SERVER_BASE_URL = "http://" + window.location.hostname;
         return {
-            DB_CARDAPIO: "http://192.168.43.220:8015/",
-            DB_DINAMICO: "http://192.168.43.220:8016/",
-            DB_STATUS: "http://192.168.43.220:8017/",
-            DB_PAGAMENTOS: "http://192.168.43.220:8018/",
-            DB_ADMIN: "http://192.168.43.220:8019/",
-            DB_LOG: "http://192.168.43.220:8020/",
-            SAVE_PHOTO: "http://192.168.43.220:8085/saveFile.php",
+            DB_CARDAPIO: SERVER_BASE_URL + ":8015/",
+            DB_DINAMICO: SERVER_BASE_URL + ":8016/",
+            DB_STATUS: SERVER_BASE_URL + ":8017/",
+            DB_PAGAMENTOS: SERVER_BASE_URL + ":8018/",
+            DB_ADMIN: SERVER_BASE_URL + ":8019/",
+            DB_LOG: SERVER_BASE_URL + ":8020/",
+            SAVE_PHOTO: SERVER_BASE_URL + ":8085/saveFile.php",
             IDSESSIONNAME: "idSession",
             ADMINDATA: "dadosAdmin",
             DEFAULTPATH: "#/",

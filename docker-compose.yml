@@ -1,10 +1,10 @@
 version: '3'
 services:
-    comanda_eletronica_front:
+    comanda_eletronica:
       build: 
           context: .
           dockerfile: Dockerfile
-      container_name: comanda_eletronica_front
+      container_name: comanda_eletronica
       ports:
           - "8085:80"
       volumes:
