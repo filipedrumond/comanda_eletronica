@@ -217,6 +217,10 @@ export default {
         }
     },
     created: function() {
+        console.log("!");
+        console.log(this.SimpleAlerts);
+        console.log("!");
+        
         this.verificarIntegridadeMesa();
         this.verificarIntegridadeDados();
         let url = `${this.DB_CARDAPIO}cardapio`;

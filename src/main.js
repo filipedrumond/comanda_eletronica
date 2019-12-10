@@ -2,12 +2,11 @@ import Vue from 'vue'
 import VueResource from 'vue-resource';
 import VueStyleLoader from 'vue-style-loader'
 import VueCookies from 'vue-cookies'
-import { SimpleAlerts } from "@filipedp/simple_dialog";
-import { SimpleConfirms } from "@filipedp/simple_dialog";
-import { SimpleFormAlerts } from "@filipedp/simple_dialog";
+
 import VueSession from 'vue-session'
 import router from './routes'
 import App from './App'
+import mixVariable from './mixins/mixVariables'
 var $ = require('jquery');
 require('bootstrap/js/dist/collapse');
 require('jquery-mask-plugin');
@@ -24,24 +23,11 @@ Vue.use(VueCookies);
 Vue.config.productionTip = false;
 /* global mixin */
 Vue.mixin({
-    data: function () {
-        let SERVER_BASE_URL = "http://" + window.location.hostname;
-        return {
-            DB_CARDAPIO: SERVER_BASE_URL + ":8015/",
-            DB_DINAMICO: SERVER_BASE_URL + ":8016/",
-            DB_STATUS: SERVER_BASE_URL + ":8017/",
-            DB_PAGAMENTOS: SERVER_BASE_URL + ":8018/",
-            DB_ADMIN: SERVER_BASE_URL + ":8019/",
-            DB_LOG: SERVER_BASE_URL + ":8020/",
-            SAVE_PHOTO: SERVER_BASE_URL + ":8085/saveFile.php",
-            IDSESSIONNAME: "idSession",
-            ADMINDATA: "dadosAdmin",
-            DEFAULTPATH: "#/",
-            USERNAME: "nome",
-
-            SimpleAlerts: SimpleAlerts,
-            SimpleConfirms: SimpleConfirms,
-            SimpleFormAlerts: SimpleFormAlerts,
+    data: function(){
+        return{    
+        //     SimpleAlerts: SimpleAlerts,
+        //     SimpleConfirms: SimpleConfirms,
+        //     SimpleFormAlerts: SimpleFormAlerts,
         }
     },
     filters: {
@@ -202,6 +188,7 @@ Vue.mixin({
         },
     }
 });
+Vue.mixin(mixVariable)
 new Vue({
     el: '#app',
     router,
