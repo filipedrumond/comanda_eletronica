@@ -1,20 +1,19 @@
 <template>
     <div id="app" class="">
-        <Nav />
-        <router-view />
-        <Rodape />
+        <Default>
+            <template v-slot:content>
+                <router-view />
+            </template>
+        </Default>
     </div>
 </template>
 
 <script>
-import Nav from "./components/Nav.vue";
-import Rodape from "./components/Rodape.vue";
+import Default from "./components/layouts/Default";
 export default {
     name: "App",
     data() {
-        return {
-            // tema: ""
-        };
+        return {};
     },
     created: function() {
         if (!this.$session.exists()) {
@@ -44,45 +43,8 @@ export default {
             }
         });
     },
-    components: { Nav, Rodape }
+    components: { Default }
 };
 </script>
 
-<style lang="scss">
-@import "../sass/variables.scss";
-a {
-    text-decoration: none;
-}
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-}
-.container-fluid {
-    padding: 0;
-}
-.link-active {
-    background-color: $white;
-    color: $black;
-}
-#app {
-    padding-top: 42px;
-    padding-bottom: 20px;
-}
-body {
-    .nav-comum {
-        display: block;
-    }
-    .nav-admin {
-        display: none;
-    }
-}
-body.admin {
-    .nav-comum {
-        display: none;
-    }
-    .nav-admin {
-        display: block;
-    }
-}
-</style>
+<style lang="scss"></style>
