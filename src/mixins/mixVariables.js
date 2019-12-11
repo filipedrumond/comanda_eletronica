@@ -2,7 +2,7 @@
 import { SimpleAlerts } from "@filipedp/simple_dialog";
 import { SimpleConfirms } from "@filipedp/simple_dialog";
 import { SimpleFormAlerts } from "@filipedp/simple_dialog";
-const mixVariable = {
+const mixVariables = {
     data:function(){
         let SERVER_BASE_URL = "http://" + window.location.hostname;
         return {
@@ -24,4 +24,4 @@ const mixVariable = {
         }
     }
 };
-export default mixVariable;
+export default mixVariables;
