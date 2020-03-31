@@ -1,5 +1,9 @@
 <template>
-    <div class=""></div>
+    <div class="">
+        ff
+        <i class="icon icon-left-arrow"></i>
+        <i class="icon icon-left-arrow-play"></i>
+    </div>
 </template>
 
 <script>

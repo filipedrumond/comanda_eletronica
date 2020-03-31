@@ -6,7 +6,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "compile-icons": "node_modules/.bin/icon-font-generator resources/assets/img/svg/icons/*.svg -o resources/assets/fonts/",
+    "icons": "npm run clear-icons && npm run compile-icons && npm run generate-webfonts",
+    "clear-icons": "node helpers/deleteOldFonts.js",
+    "compile-icons": "node_modules/.bin/icon-font-generator src/assets/icons/*.svg -o ./html/fonts/",
+    "generate-webfonts": "node helpers/webfonts.js",
     "dev": "npm run development",
     "development": "node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",

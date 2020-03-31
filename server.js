@@ -14,6 +14,7 @@ const app = express();
 
 app.use('/build', express.static('html/build'));
 app.use('/assets', express.static('html/assets'));
+app.use('/fonts', express.static('html/fonts'));
 
 /* NO ROUTES HERE TRATAMENTO PARA O VUE GERENCIAR MAS CUIDADO FUTURO PARA CASO DE POSTS OU TRATAMENTO DE FOTOS ETC */
 app.use('*', routes);

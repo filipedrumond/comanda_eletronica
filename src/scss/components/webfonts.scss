@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "icons";
+    src: url("../../../html/fonts/icons.eot?adcf3958de4a1d5eb965e105b524848f?#iefix") format("embedded-opentype"),
+url("../../../html/fonts/icons.woff2?adcf3958de4a1d5eb965e105b524848f") format("woff2"),
+url("../../../html/fonts/icons.woff?adcf3958de4a1d5eb965e105b524848f") format("woff"),
+url("../../../html/fonts/icons.ttf?adcf3958de4a1d5eb965e105b524848f") format("truetype"),
+url("../../../html/fonts/icons.svg?adcf3958de4a1d5eb965e105b524848f#icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-arrow-play:before {
+    content: "\f101";
+}
+.icon-left-arrow:before {
+    content: "\f102";
+}
+.icon-play-full:before {
+    content: "\f103";
+}
