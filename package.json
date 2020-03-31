@@ -1,7 +1,7 @@
 {
-  "name": "coleira-qr-code",
+  "name": "comanda-eletronica",
   "version": "1.0.0",
-  "description": "Projeto de coleira qr code para animais",
+  "description": "Projeto de Comanda eletronica",
   "author": "Filipe Drumond <filipe.dp@outlook.com>",
   "main": "server.js",
   "scripts": {

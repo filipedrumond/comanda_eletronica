@@ -34,7 +34,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     if (!to) next("/404");
 
-    document.title = (to.meta.title || "") + " qr coleira"
+    document.title = (to.meta.title || "") + " qr comanda"
     next();
     return;
 })

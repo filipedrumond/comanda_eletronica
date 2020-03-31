@@ -1,10 +1,10 @@
 version: '3'
 services:
-    coleira-qr-code:
+    comanda-eletronica-node:
       build: 
           context: .
           dockerfile: Dockerfile
-      container_name: coleira-qr-code
+      container_name: comanda-eletronica-node
       ports:
           - "510:80"
       volumes:

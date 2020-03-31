@@ -1,69 +1,31 @@
 {
-    "statusColeira": [
+    "pratos": [
+        {}
+    ],
+    "categorias": [
         {
             "id": 1,
-            "status": "Ativo"
+            "categoria": "Prato Principal"
         },
         {
             "id": 2,
-            "status": "Perdido"
+            "categoria": "Entrada"
         },
         {
             "id": 3,
-            "status": "Inativo"
+            "categoria": "Bebida"
         },
         {
             "id": 4,
-            "status": "Deletado"
-        }
-    ],
-    "statusUsuario": [
-        {
-            "id": 1,
-            "status": "Ativo"
+            "categoria": "Bebida Alcoolica"
         },
         {
-            "id": 2,
-            "status": "Inativo"
+            "id": 5,
+            "categoria": "Tira Gosto"
         },
         {
-            "id": 3,
-            "status": "Deletado"
-        }
-    ],
-    "tipoAnimal": [
-        {
-            "id": 1,
-            "tipo": "cachorro"
-        }
-    ],
-    "usuarios": [
-        {
-            "id": 1,
-            "nome": "Filipe Drumond",
-            "idStatusUsuario": 1,
-            "usuario": "filipe.dp",
-            "senha": "123",
-            "dataCadastro": "20/03/2020"
-        }
-    ],
-    "animais": [
-        {
-            "id": 1,
-            "idTipo": 1,
-            "nome": "Chloe",
-            "raca": "Labrador",
-            "idade": "2a/6m"
-        }
-    ],
-    "coleiras": [
-        {
-            "id": 1,
-            "idDono": 1,
-            "idAnimal": 1,
-            "idStatusColeira": 1,
-            "ultimoAcesso": "21/03/2020",
-            "ultimaLocalizacao": "qqrlcoisa"
+            "id": 6,
+            "categoria": "Doce"
         }
     ]
 }
