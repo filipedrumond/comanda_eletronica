@@ -1,220 +1,69 @@
 {
-    "categorias": [
+    "statusColeira": [
         {
             "id": 1,
-            "categoria": "Prato Principal"
+            "status": "Ativo"
         },
         {
             "id": 2,
-            "categoria": "Entrada"
+            "status": "Perdido"
         },
         {
             "id": 3,
-            "categoria": "Bebida"
+            "status": "Inativo"
         },
         {
             "id": 4,
-            "categoria": "Bebida Alcoolica"
-        },
-        {
-            "id": 5,
-            "categoria": "Tira Gosto"
-        },
-        {
-            "id": 6,
-            "categoria": "Doce"
+            "status": "Deletado"
         }
     ],
-    "mesaStatus": [
+    "statusUsuario": [
         {
             "id": 1,
-            "status": "Disponível"
+            "status": "Ativo"
         },
         {
             "id": 2,
-            "status": "Aguardando Pagamento"
+            "status": "Inativo"
         },
         {
             "id": 3,
-            "status": "Fechada"
+            "status": "Deletado"
         }
     ],
-    "pratoStatus": [
+    "tipoAnimal": [
         {
             "id": 1,
-            "status": "Disponível"
-        },
-        {
-            "id": 2,
-            "status": "Promoção por tempo limitado"
-        },
-        {
-            "id": 3,
-            "status": "Indisponível"
+            "tipo": "cachorro"
         }
     ],
-    "base": [
+    "usuarios": [
         {
             "id": 1,
-            "content": "teste_1"
-        },
-        {
-            "id": 2,
-            "content": "teste_2"
-        },
-        {
-            "id": 3,
-            "content": "teste_3"
-        },
-        {
-            "content": "teste_post",
-            "id": 4
-        },
-        {
-            "content": "teste_post",
-            "id": 5
+            "nome": "Filipe Drumond",
+            "idStatusUsuario": 1,
+            "usuario": "filipe.dp",
+            "senha": "123",
+            "dataCadastro": "20/03/2020"
         }
     ],
-    "mesas": [
+    "animais": [
         {
             "id": 1,
-            "status": 1,
-            "sessions":[
-                {"idSession":1,"nome":"Filipe"}
-            ]
+            "idTipo": 1,
+            "nome": "Chloe",
+            "raca": "Labrador",
+            "idade": "2a/6m"
         }
     ],
-    "comandas": [
+    "coleiras": [
         {
             "id": 1,
-            "pedidos": [
-                1
-            ],
-            "valor": 5,
-            "mesa": 1
-        }
-    ],
-    "pedidos": [
-        {
-            "id": 1,
-            "items": [
-                {
-                    "id": 1,
-                    "qtd": 1,
-                    "ingredientes": []
-                },
-                {
-                    "id": 1,
-                    "qtd": 1,
-                    "ingredientes": [
-                        "Cebola"
-                    ]
-                }
-            ]
-        }
-    ],
-    "cardapio": [
-        {
-            "nome": "MIOJO",
-            "descricao": "MIOJO COMPLETASSO CABULOSO",
-            "categoria": "Prato Principal",
-            "valor": 2.5,
-            "status": 1,
-            "ingredientes": [
-                {
-                    "id": 1,
-                    "ingrediente": "Cebola"
-                },
-                {
-                    "id": 2,
-                    "ingrediente": "Pimenta"
-                },
-                {
-                    "id": 3,
-                    "ingrediente": "Miojo"
-                },
-                {
-                    "id": 4,
-                    "ingrediente": "Tempero"
-                }
-            ],
-            "imgs": [
-                "607349.png",
-                "images.jpg"
-            ],
-            "id": 1
-        },
-        {
-            "nome": "MIOJO56",
-            "descricao": "MIOJO COMPLETASSO CABULOSO",
-            "categoria": "Tira Gosto",
-            "valor": 2.5,
-            "status": 2,
-            "ingredientes": [
-                {
-                    "id": 1,
-                    "ingrediente": "Cebola"
-                },
-                {
-                    "id": 2,
-                    "ingrediente": "Pimenta"
-                },
-                {
-                    "id": 3,
-                    "ingrediente": "Miojo"
-                },
-                {
-                    "id": 4,
-                    "ingrediente": "Tempero"
-                }
-            ],
-            "imgs": [
-                "607349.png",
-                "images.jpg"
-            ],
-            "id": 2
-        },
-        {
-            "nome": "MIOJO3",
-            "descricao": "MIOJO COMPLETASSO CABULOSO",
-            "categoria": "Entrada",
-            "valor": 2.5,
-            "status": 3,
-            "ingredientes": [
-                {
-                    "id": 1,
-                    "ingrediente": "Cebola"
-                },
-                {
-                    "id": 2,
-                    "ingrediente": "Pimenta"
-                },
-                {
-                    "id": 3,
-                    "ingrediente": "Miojo"
-                },
-                {
-                    "id": 4,
-                    "ingrediente": "Tempero"
-                }
-            ],
-            "imgs": [
-                "607349.png",
-                "images.jpg"
-            ],
-            "id": 3
-        },
-        {
-            "nome": "DOLLY GUARANÁ",
-            "descricao": "Bebida refrescante sabor guaraná",
-            "categoria": "Bebida",
-            "valor": 3.5,
-            "status": 1,
-            "ingredientes": [],
-            "imgs": [
-                "images.jpg"
-            ],
-            "id": 4
+            "idDono": 1,
+            "idAnimal": 1,
+            "idStatusColeira": 1,
+            "ultimoAcesso": "21/03/2020",
+            "ultimaLocalizacao": "qqrlcoisa"
         }
     ]
 }

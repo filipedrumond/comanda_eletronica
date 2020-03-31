@@ -1,0 +1,38 @@
+&{
+    section{
+        display: flex;
+
+        width: 100vw;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        height: 100vh;
+        align-items: center;
+    }
+    .content {
+        width: 35%;
+        padding-bottom: 25vh;
+        .title{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        form{
+            input{
+                margin-top: 0.1rem;
+                margin-bottom: 1rem;
+            }
+            input{
+                width: 100%;
+                &[type="text"], &[type="password"]{
+                    // 4px ( 2px da borda de cada lado )
+                    width: calc(100% - 4px - 1rem);
+                    padding: 0.5rem;
+                }
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+}

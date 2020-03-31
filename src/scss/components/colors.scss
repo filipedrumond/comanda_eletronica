@@ -1,0 +1,19 @@
+@if $theme == 1 {
+    $primary: #1EADF0;
+    $secondary: #0AFB60;
+} @else if $theme == 2 {
+    $primary: #FFE031;
+    $secondary: #F04579;
+} @else if $theme == 3 {
+    $primary: #0100EC;
+    $secondary: #FB36F4;
+} @else if $theme == 4 {
+    $primary: #00FFED;
+    $secondary: #9D00C6;
+} @else if $theme == 5 {
+    $primary: #F237EF;
+    $secondary: #FC5252;
+} @else {
+    $primary: #E5F230;
+    $secondary: #54D863;
+}

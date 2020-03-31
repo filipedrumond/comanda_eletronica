@@ -1,0 +1,11 @@
+$primary: #E5F230;
+$secondary: #54D863;
+$theme: 5;
+@import "scss/components/_";
+body{
+    @import "scss/routes/_";
+}
+*{
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,9 @@
+form{
+    input{
+        &:focus{
+            outline-color: $primary;
+        }
+        border-radius: 2px;
+        border: 1px solid #ddd;
+    }
+}
