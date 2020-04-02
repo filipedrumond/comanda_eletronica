@@ -1,9 +1,15 @@
 $primary: #E5F230;
 $secondary: #54D863;
-$theme: 5;
-@import "scss/components/_";
+$theme: 6;
+
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+@import 'scss/components/_';
 body{
-    @import "scss/routes/_";
+    font-size: 2rem;
+    @import 'scss/routes/_';
+    @import 'scss/layouts/_';
 }
 *{
     margin: 0;

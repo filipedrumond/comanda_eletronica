@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var data = fs.readFileSync('./html/fonts/icons.css', 'utf8')
-var result = data.replace(new RegExp('./icons', 'g'), '../../../html/fonts/icons');
+var result = data.replace(new RegExp('./icons', 'g'), '../../../fonts/icons');
 
 fs.writeFile('./src/scss/components/webfonts.scss', result, 'utf8', function (err) {
     if (err) return console.log(err);

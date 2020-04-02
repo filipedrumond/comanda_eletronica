@@ -13,6 +13,9 @@
 } @else if $theme == 5 {
     $primary: #F237EF;
     $secondary: #FC5252;
+} @else if $theme == 6 {
+    $primary: #FFE53B;
+    $secondary: #FF2525;
 } @else {
     $primary: #E5F230;
     $secondary: #54D863;
